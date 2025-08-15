@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReSwap Website Testing</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff9f2;
+        }
+        .test-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #31a050;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #31a050;
+            margin-bottom: 20px;
+        }
+        .page-link {
+            display: inline-block;
+            background-color: #31a050;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s ease;
+        }
+        .page-link:hover {
+            background-color: #2a8a44;
+            transform: translateY(-2px);
+        }
+        .fitshare {
+            background-color: #008a73;
+        }
+        .fitshare:hover {
+            background-color: #006d5a;
+        }
+        .needshare {
+            background-color: #df3f42;
+        }
+        .needshare:hover {
+            background-color: #c73134;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:before {
+            content: "✓";
+            color: #31a050;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            background-color: #31a050;
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 ReSwap Website - Unified Testing Hub</h1>
+    
+    <div class="test-section">
+        <h2>📱 Navigate to Pages</h2>
+        <p>Test the navigation between different pages and communities:</p>
+        <a href="index.html" class="page-link">Homepage (Main)</a>
+        <a href="fitshare.html" class="page-link fitshare">FitShare Community</a>
+        <a href="needshare.html" class="page-link needshare">NeedShare Community</a>
+    </div>
+
+    <div class="test-section">
+        <h2>✅ Implementation Status</h2>
+        <ul class="feature-list">
+            <li>Unified file structure with centralized CSS/JS <span class="status">COMPLETED</span></li>
+            <li>Theme system with automatic color switching <span class="status">COMPLETED</span></li>
+            <li>Responsive navigation between communities <span class="status">COMPLETED</span></li>
+            <li>Fixed header that stays on top when scrolling <span class="status">COMPLETED</span></li>
+            <li>Enhanced navigation with active state styling <span class="status">COMPLETED</span></li>
+            <li>Rounded section corners with gradient styling <span class="status">COMPLETED</span></li>
+            <li>Original homepage "Meet Our Communities" styling <span class="status">COMPLETED</span></li>
+            <li>Original homepage "Why Choose ReSwap" styling <span class="status">COMPLETED</span></li>
+            <li>"How It Works" sections on community pages <span class="status">COMPLETED</span></li>
+            <li>"Explore Other ReSwap Communities" sections <span class="status">COMPLETED</span></li>
+            <li>Enhanced responsive design for mobile <span class="status">COMPLETED</span></li>
+            <li>Improved visual hierarchy and spacing <span class="status">COMPLETED</span></li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🧪 What to Test</h2>
+        <ul class="feature-list">
+            <li>Fixed header behavior - stays on top when scrolling</li>
+            <li>Navigation active states with rounded background</li>
+            <li>Rounded corners on sections (Communities, Info, CTA, Footer)</li>
+            <li>Enhanced community cards with hover effects</li>
+            <li>"How It Works" sections on FitShare and NeedShare pages</li>
+            <li>"Explore Other ReSwap Communities" grid layouts</li>
+            <li>Gradient backgrounds and transitions between sections</li>
+            <li>Mobile responsive design on different screen sizes</li>
+            <li>Theme switching between homepage, FitShare, and NeedShare</li>
+            <li>Smooth scrolling and improved animations</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>📁 File Structure</h2>
+        <p>The website now has a clean, unified structure:</p>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto;">
+reswap-website/
+├── index.html          # Main homepage
+├── fitshare.html       # FitShare community
+├── needshare.html      # NeedShare community
+├── css/global.css      # Unified styles
+├── js/global.js        # Unified functionality
+├── images/             # All images
+└── test.html          # This testing page
+        </pre>
+    </div>
+
+    <div class="test-section">
+        <h2>🎨 Theme Colors</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background-color: #31a050; border-radius: 50%; margin: 0 auto 10px;"></div>
+                <strong>Homepage</strong><br>
+                <small>#31a050</small>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background-color: #008a73; border-radius: 50%; margin: 0 auto 10px;"></div>
+                <strong>FitShare</strong><br>
+                <small>#008a73</small>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background-color: #df3f42; border-radius: 50%; margin: 0 auto 10px;"></div>
+                <strong>NeedShare</strong><br>
+                <small>#df3f42</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
