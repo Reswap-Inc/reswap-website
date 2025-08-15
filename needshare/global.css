@@ -1,0 +1,122 @@
+:root {
+  --primary-red: #df3f42;
+  --primary-red-dark: #c73134;
+  --off-white: #fff9f2;
+  --text-dark: #000000;
+  --text-light: #fff9f2;
+  --text-muted: #4b4b4b;
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Frank Ruhl Libre', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--off-white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  color: var(--primary-red);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.section-title {
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-red);
+    margin-bottom: 24px;
+}
+
+.section-subtitle {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 630px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.red-section {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    border-radius: 60px 60px 0 0;
+    padding: 100px 0;
+    margin-top: -60px;
+    position: relative;
+    z-index: 5;
+}
+
+.red-section h2, .red-section p {
+    color: var(--text-light);
+    text-align: center;
+}
+
+.red-section p {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+    max-width: 933px;
+    margin: 24px auto 0;
+}
+
+.red-section p strong {
+    font-weight: 800;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .section-title {
+    font-size: 48px;
+  }
+  .red-section p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section-title {
+    font-size: 36px;
+  }
+   .red-section {
+    padding: 80px 0;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+  }
+}

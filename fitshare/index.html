@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReSwap - FitShare Community</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.site-header {
+  padding: 30px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px;
+}
+.main-nav .nav-link {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+.main-nav .nav-link.active {
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+  padding: 26px 24px;
+  border-radius: 0 0 10px 10px;
+  margin-top: -30px;
+}
+.btn-download {
+  padding: 12px 25px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (max-width: 992px) {
+  .main-nav {
+    display: none; /* Simple hide for mobile, would need JS for a hamburger menu */
+  }
+}
+
+/* CSS for section section:hero */
+.hero-section {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: var(--color-background);
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.hero-content {
+  flex: 1;
+}
+.hero-welcome {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 500;
+  font-size: 29px;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.02;
+  letter-spacing: -3.2px;
+  margin-bottom: 28px;
+}
+.hero-description {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 488px;
+  margin-bottom: 40px;
+}
+.app-buttons {
+  display: flex;
+  gap: 18px;
+}
+.app-buttons img {
+  height: 38px;
+  width: auto;
+}
+.hero-image {
+  flex: 1;
+  max-width: 572px;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    order: 2;
+  }
+  .hero-image {
+    order: 1;
+    margin-bottom: 40px;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .app-buttons {
+    justify-content: center;
+  }
+}
+
+/* CSS for section section:what-is */
+.info-section {
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+  color: var(--color-text-light);
+}
+.info-section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-primary);
+  border-radius: 60px 60px 0 0;
+  z-index: -1;
+}
+.info-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255, 249, 242, 0) 0%, var(--color-primary) 100%);
+  z-index: -1;
+}
+.info-container {
+  max-width: 933px;
+}
+.info-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.29;
+  color: var(--color-text-light);
+  margin-bottom: 17px;
+}
+.info-description {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.33;
+}
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 48px;
+  }
+  .info-description {
+    font-size: 20px;
+  }
+}
+
+/* CSS for section section:features */
+.features-section {
+  padding: 120px 0;
+  background-color: var(--color-background);
+  margin-top: -60px; /* Overlap with the section above */
+  border-radius: 60px 60px 0 0;
+}
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 62px;
+}
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 348px;
+}
+.feature-icon {
+  width: 76px;
+  height: 93px;
+  margin-bottom: 17px;
+}
+.feature-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.29;
+  margin-bottom: 12px;
+}
+.feature-description {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.41;
+}
+@media (max-width: 992px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* CSS for section section:how-it-works */
+.how-it-works-section {
+  padding: 100px 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 68px;
+}
+.how-it-works-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.how-it-works-card {
+  padding: 74px 50px;
+  max-width: 550px;
+}
+.how-it-works-card.lendor {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border-radius: 0px 60px 60px 0px;
+  box-shadow: 9px 9px 17.5px 0px rgba(0, 0, 0, 0.25);
+}
+.how-it-works-card.lendor h3 {
+  color: var(--color-text-light);
+}
+.how-it-works-card h3 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.how-it-works-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.how-it-works-card ul li {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  padding-left: 67px;
+  position: relative;
+  min-height: 45px;
+}
+.how-it-works-card ul li:not(:last-child) {
+  margin-bottom: 70px;
+}
+.how-it-works-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.lendor ul li:nth-child(1)::before { background-image: url('images/4875_580.svg'); }
+.lendor ul li:nth-child(2)::before { background-image: url('images/4875_581.svg'); }
+.lendor ul li:nth-child(3)::before { background-image: url('images/4875_582.svg'); }
+.seller ul li:nth-child(1)::before { background-image: url('images/4875_585.svg'); }
+.seller ul li:nth-child(2)::before { background-image: url('images/4875_586.svg'); }
+.seller ul li:nth-child(3)::before { background-image: url('images/4875_587.svg'); }
+
+@media (max-width: 1200px) {
+  .how-it-works-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .how-it-works-card.lendor {
+    border-radius: 30px;
+  }
+}
+
+/* CSS for section section:explore */
+.explore-section {
+  padding: 100px 0;
+}
+.explore-container {
+  text-align: center;
+}
+.section-subtitle {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.41;
+  color: #4b4b4b;
+  max-width: 631px;
+  margin: 0 auto 27px auto;
+}
+.communities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 491px);
+  gap: 36px 48px;
+  justify-content: center;
+}
+.community-card {
+  height: 229px;
+  background-color: #d9d9d9;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 1100px) {
+  .communities-grid {
+    grid-template-columns: 1fr;
+    max-width: 491px;
+    margin: 0 auto;
+  }
+}
+
+/* CSS for section section:why-it-matters */
+/* Reusing styles from .info-section */
+#why-it-matters .info-container {
+  max-width: 836px;
+}
+#why-it-matters .info-description {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  #why-it-matters .info-description {
+    font-size: 18px;
+  }
+}
+
+/* CSS for section section:cta */
+.cta-section {
+  padding: 150px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: -60px;
+  border-radius: 60px 60px 0 0;
+  background-color: var(--color-background);
+}
+.cta-blur-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1014px;
+  height: 424px;
+  filter: blur(200px); /* Adjusted blur for better effect */
+  z-index: 0;
+}
+.cta-container {
+  position: relative;
+  z-index: 1;
+}
+.cta-title {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -1.6px;
+  max-width: 827px;
+  margin: 0 auto 35px auto;
+}
+.btn-cta {
+  padding: 24px 93px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 11px;
+}
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 50px;
+  }
+  .btn-cta {
+    padding: 18px 40px;
+    font-size: 18px;
+  }
+}
+
+/* CSS for section section:footer */
+.site-footer {
+  position: relative;
+  color: var(--color-text-light);
+  padding-top: 100px;
+}
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-primary);
+  border-radius: 60px 60px 0 0;
+  z-index: -1;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+.footer-logo-area {
+  flex-shrink: 0;
+}
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 24px;
+  color: rgba(255, 249, 242, 0.63);
+  margin-bottom: 1.5em;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col li {
+  margin-bottom: 1em;
+}
+.footer-col a {
+  font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.footer-subscribe h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+.footer-subscribe h5 {
+  font-family: 'Hiragino Kaku Gothic StdN', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+.footer-subscribe p {
+  font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  max-width: 378px;
+}
+.subscribe-form {
+  margin-top: 20px;
+  position: relative;
+  background: var(--color-background);
+  border-radius: 13px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.subscribe-form input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0 15px;
+  font-size: 14px;
+  color: var(--color-primary);
+}
+.subscribe-form input::placeholder {
+  color: rgba(0, 138, 115, 0.46);
+}
+.subscribe-form button {
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-legal {
+  font-size: 10px !important;
+  margin-top: 12px;
+  color: #d9d9d9;
+}
+.form-legal a {
+  text-decoration: underline;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  margin-top: 60px;
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+  border-radius: 60px 60px 0 0;
+  position: relative;
+  bottom: -67px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+.footer-bottom-links a {
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer-bottom-links a:not(:last-child) {
+  margin-right: 60px;
+}
+.copyright {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media (max-width: 1300px) {
+  .footer-main {
+    flex-wrap: wrap;
+  }
+  .footer-logo-area {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  .footer-subscribe {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-subscribe p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header id="header" class="site-header">
+  <div class="container header-container">
+    <!--merged image-->
+    <a href="#" class="logo">
+      <div style="position: relative; width: 162px; height: 42px;">
+        <img src="images/4874_482.svg" alt="Re" style="position: absolute; top: 9px; left: 0;">
+        <img src="images/4874_479.svg" alt="Swap icon" style="position: absolute; top: 0; left: 52px;">
+        <img src="images/4874_485.svg" alt="wap" style="position: absolute; top: 6px; left: 85px;">
+      </div>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#explore" class="nav-link">Communities</a></li>
+        <li><a href="#footer" class="nav-link">About us</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn btn-download">Download App</a>
+  </div>
+</header>
+<section id="hero" class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <p class="hero-welcome">Welcome to the</p>
+      <h1 class="hero-title">FitShare<br>Community</h1>
+      <p class="hero-description">FitShare is where USC students trade, sell, and discover outfits for every moment—game days, formals, themed parties, internships, and more.</p>
+      <div class="app-buttons">
+        <a href="#"><img src="images/1c41e25ab93db7fcdfabed0036de688a198b3936.png" alt="Get it on Google Play"></a>
+        <a href="#"><img src="images/cd59a9d0558a462e95b7f3ccd162dc407b90cea8.png" alt="Download on the App Store"></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/f23c21e44b8016deb3da644bc67a72deb1a46520.png" alt="FitShare app on a phone">
+    </div>
+  </div>
+</section>
+<section id="what-is" class="info-section">
+  <div class="info-section-background"></div>
+  <div class="container info-container">
+    <h2 class="info-title">What is FitShare?</h2>
+    <p class="info-description">FitShare is your campus closet on demand. Instead of buying brand new, explore pre‑loved pieces from students who’ve already rocked them and give your old fits a second life.</p>
+  </div>
+</section>
+<section id="features" class="features-section">
+  <div class="container features-container">
+    <div class="feature-card">
+      <img src="images/4874_522.svg" alt="Trusted Icon" class="feature-icon">
+      <h3 class="feature-title">Local & Trusted</h3>
+      <p class="feature-description">Only USC students can list, swap, and buy.</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/4874_514.svg" alt="Trusted Icon" class="feature-icon">
+      <h3 class="feature-title">Local & Trusted</h3>
+      <p class="feature-description">Only USC students can list, swap, and buy.</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/4874_506.svg" alt="Trusted Icon" class="feature-icon">
+      <h3 class="feature-title">Local & Trusted</h3>
+      <p class="feature-description">Only USC students can list, swap, and buy.</p>
+    </div>
+  </div>
+</section>
+<section id="how-it-works" class="how-it-works-section">
+  <div class="container">
+    <h2 class="section-title">How it Works</h2>
+    <div class="how-it-works-grid">
+      <div class="how-it-works-card lendor">
+        <h3>If you are a Lendor:</h3>
+        <ul>
+          <li>Browse, pick an item, message vendor, pick number of days you want to borrow, accepted/ rejected, send deposit money.</li>
+          <li>Meet up with vendor or lockers, take picture of item, use, take a picture before returning it.</li>
+          <li>Return, get your calculated amount back based on how long you used it.</li>
+        </ul>
+      </div>
+      <div class="how-it-works-card seller">
+        <h3>If you are a Seller:</h3>
+        <ul>
+          <li>Browse, pick an item, message vendor, pick number of days you want to borrow, accepted/ rejected, send deposit money.</li>
+          <li>Meet up with vendor or lockers, take picture of item, use, take a picture before returning it.</li>
+          <li>Return, get your calculated amount back based on how long you used it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="explore" class="explore-section">
+  <div class="container explore-container">
+    <h2 class="section-title">Explore Other Communities</h2>
+    <p class="section-subtitle">Four student‑powered spaces, each built to make college life simpler. Hover over each to learn more.</p>
+    <div class="communities-grid">
+      <div class="community-card"></div>
+      <div class="community-card"></div>
+      <div class="community-card"></div>
+      <div class="community-card"></div>
+    </div>
+  </div>
+</section>
+<section id="why-it-matters" class="info-section">
+  <div class="info-section-background"></div>
+  <div class="container info-container">
+    <h2 class="info-title">Why it Matters?</h2>
+    <p class="info-description">FitShare makes fashion feel lighter on your wallet and the planet. Every piece you swap is one less item sitting in a closet or a landfill and one more student stepping out in style.</p>
+  </div>
+</section>
+<section id="cta" class="cta-section">
+  <img src="images/4874_527.svg" class="cta-blur-bg" alt="">
+  <div class="container cta-container">
+    <h2 class="cta-title">Share, Swap, and Save with ReSwap</h2>
+    <a href="#" class="btn btn-cta">Get Started Now</a>
+  </div>
+</section>
+<footer id="footer" class="site-footer">
+  <div class="footer-background"></div>
+  <div class="container footer-container">
+    <div class="footer-main">
+      <div class="footer-logo-area">
+        <!--merged image-->
+        <a href="#" class="footer-logo">
+          <div style="position: relative; width: 234px; height: 96px;">
+            <span style="position: absolute; left: 0; top: 0; color: #ffffff; font-family: 'Hiragino Kaku Gothic StdN', sans-serif; font-weight: 800; font-size: 64px; letter-spacing: 1.92px;">Re</span>
+            <img src="images/4874_448.svg" alt="Swap icon" style="position: absolute; left: 109px; top: 13px; width: 61px; height: 76px;">
+            <span style="position: absolute; left: 176px; top: 0; color: #ffffff; font-family: 'Hiragino Kaku Gothic StdN', sans-serif; font-weight: 800; font-size: 64px; letter-spacing: 1.92px;">wap</span>
+          </div>
+        </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Communities</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Report a Listing</a></li>
+            <li><a href="#">Safety Tips</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Campus Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-subscribe">
+        <h4>Stay in the Loop</h4>
+        <p>Get insider tips, housing alerts, and student deals.</p>
+        <h5>JOIN NOW</h5>
+        <p>never miss what's happening on ReSwap.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your Email *">
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="form-legal">By subscribing you agree to with our <a href="#">Private Policy</a> & provide consent to receive updates from our company.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <p class="copyright">© ReSwap 2025</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
