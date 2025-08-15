@@ -330,6 +330,28 @@ class MobileMenu {
           }
         }
       }
+      
+      // Close mobile menu when clicking on nav links
+      if (e.target.matches('.nav-link')) {
+        const nav = document.querySelector('.main-nav');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        
+        // Only close if we're in mobile view (toggle is visible)
+        if (nav && toggle && toggle.style.display === 'block') {
+          nav.style.display = 'none';
+        }
+      }
+      
+      // Close mobile menu when clicking outside
+      if (!e.target.closest('.main-nav') && !e.target.matches('.mobile-menu-toggle')) {
+        const nav = document.querySelector('.main-nav');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        
+        // Only close if we're in mobile view and menu is open
+        if (nav && toggle && toggle.style.display === 'block' && nav.style.display === 'block') {
+          nav.style.display = 'none';
+        }
+      }
     });
   }
 }
