@@ -302,15 +302,15 @@ a.nav-link.active {
   text-decoration-thickness: 3px;
 }
 
-.app-buttons {
+.hero-section .app-buttons {
   display: flex;
   gap: 16px;
   margin-bottom: 20px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .app-buttons img {
-  height: 50px;
+  height: 45px;
   width: auto;
 }
 
