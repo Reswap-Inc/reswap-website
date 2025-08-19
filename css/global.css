@@ -67,6 +67,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+
+
 p {
   line-height: 1.6;
   margin: 0;
@@ -206,6 +208,10 @@ a {
   background-color: var(--color-primary);
 }
 
+a.nav-link.active {
+    padding-top: 40px;
+}
+
 .main-nav .nav-link.active::before {
   display: none;
 }
@@ -224,6 +230,7 @@ a {
   color: var(--color-primary);
   margin-bottom: 24px;
   font-family: var(--font-heading);
+/*    letter-spacing: 10px;*/
 }
 
 .section-subtitle {
@@ -257,7 +264,7 @@ a {
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
   position: relative;
   z-index: 2;
