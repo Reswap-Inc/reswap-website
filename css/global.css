@@ -437,8 +437,9 @@ a.nav-link.active {
 /* Communities Section */
 .communities-section {
   padding: 100px 0;
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
   position: relative;
+  border-radius: 60px 60px 0 0;
 }
 
 .communities-section::before {
