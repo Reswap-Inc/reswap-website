@@ -257,7 +257,7 @@ a.nav-link.active {
 .hero-section {
   padding: 150px 0 80px;
   position: relative;
-  background: linear-gradient(135deg, var(--color-background) 0%, #f0f8ff 100%);
+  background: var(--color-background);
   overflow: hidden;
 }
 
@@ -1095,6 +1095,9 @@ a.nav-link.active {
 .faq-section {
   padding: 80px 0;
   background-color: #FFF9F2;
+  background: var(--color-background);
+  overflow: hidden;
+}
   position: relative;
 }
 
