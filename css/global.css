@@ -381,8 +381,9 @@ a.nav-link.active {
 .why-choose-section {
   padding: 100px 0;
   background-color: var(--color-primary);
-  background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%);
-  /* position: relative; */
+  /* background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%); */
+  position: relative;
+  margin-top: -60px;
   border-radius: 60px 60px 0 0;
 }
 
