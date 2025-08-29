@@ -1,3 +1,44 @@
+/* Slightly smaller section titles for About page */
+.section-title-small {
+  font-size: 2.8rem !important;
+}
+/* Meet The Team section styles */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-placeholder-rect {
+  width: 200px;
+  height: 280px;
+  background: #eaeaea;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: #bdbdbd;
+}
+.team-subtitle {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #e6d8c3;
+  font-weight: bold;
+}
+.team-subtext {
+  margin-top: 4px;
+  font-size: 15px;
+  color: #eaeaea;
+}
+/* Why Choose ReSwap grid: 2 per row */
+#why-choose .features-grid {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+}
+/* Clothing Community Custom Theme */
+.community-card.clothing-theme {
+  background: rgba(0, 138, 115, 0.04) !important;
+}
 /* ReSwap Global Styles - Unified Theme System */
 
 /* CSS Custom Properties (Variables) for Theme System */
@@ -67,6 +108,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+
+
 p {
   line-height: 1.6;
   margin: 0;
@@ -131,9 +174,9 @@ a {
   z-index: 1000;
   transition: all 0.3s ease;
   width: 100%;
-  background-color: var(--color-background);
+/*  background-color: var(--color-background);*/
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+/*  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);*/
   padding: 20px 0;
 }
 
@@ -184,7 +227,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -206,6 +249,10 @@ a {
   background-color: var(--color-primary);
 }
 
+a.nav-link.active {
+    padding-top: 40px;
+}
+
 .main-nav .nav-link.active::before {
   display: none;
 }
@@ -214,6 +261,7 @@ a {
   margin-left: 8px;
   width: 12px;
   height: 10px;
+  transform: rotate(90deg);
 }
 
 /* Section Styles */
@@ -222,8 +270,9 @@ a {
   font-weight: 700;
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: 24px;
+/*  margin-bottom: 24px;*/
   font-family: var(--font-heading);
+/*    letter-spacing: 10px;*/
 }
 
 .section-subtitle {
@@ -250,14 +299,14 @@ a {
 .hero-section {
   padding: 150px 0 80px;
   position: relative;
-  background: linear-gradient(135deg, var(--color-background) 0%, #f0f8ff 100%);
+  /* background: url('../images/fitshare hero.png') center center/cover no-repeat; */
   overflow: hidden;
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -268,8 +317,8 @@ a {
 }
 
 .hero-title {
-  font-size: 72px;
-  font-weight: 700;
+  font-size: 55px;
+  font-weight: 600;
   line-height: 1.1;
   margin-bottom: 24px;
   color: var(--color-primary);
@@ -295,15 +344,15 @@ a {
   text-decoration-thickness: 3px;
 }
 
-.app-buttons {
+.hero-section .app-buttons {
   display: flex;
   gap: 16px;
   margin-bottom: 20px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .app-buttons img {
-  height: 50px;
+  height: 40px;
   width: auto;
 }
 
@@ -333,7 +382,7 @@ a {
   padding: 100px 0;
   background-color: var(--color-primary);
   background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%);
-  position: relative;
+  /* position: relative; */
   border-radius: 60px 60px 0 0;
 }
 
@@ -349,9 +398,8 @@ a {
 }
 
 .why-choose-section .section-title {
-  font-size: 80px;
+  font-size: 64px;
   line-height: 1.1;
-  letter-spacing: -3.2px;
   text-align: center;
   margin-bottom: 20px;
   color: white;
@@ -369,17 +417,17 @@ a {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-top: 60px;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .feature-card {
   text-align: center;
-  padding: 40px 30px;
+  padding: 40px 40px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -431,8 +479,9 @@ a {
 /* Communities Section */
 .communities-section {
   padding: 100px 0;
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
   position: relative;
+  border-radius: 60px 60px 0 0;
 }
 
 .communities-section::before {
@@ -487,6 +536,8 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+
 
 .community-title {
   font-size: 40px;
@@ -645,8 +696,8 @@ a {
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: auto;
+  height: 35px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -960,7 +1011,7 @@ a {
   }
   
   .section-title {
-    font-size: 28px;
+  font-size: 32px;
   }
   
   .why-choose-section .section-title {
@@ -1087,9 +1138,13 @@ a {
 /* FAQ Section */
 .faq-section {
   padding: 80px 0;
-  background-color: white;
-  position: relative;
+  background-color: #FFF9F2;
+  background: var(--color-background);
+  overflow: hidden;
+    position: relative;
+
 }
+
 
 .faq-bg-gradient {
   position: absolute;
@@ -1106,8 +1161,14 @@ a {
 }
 
 .faq-item {
-  border-bottom: 1px solid #eee;
-  padding: 24px 0;
+    outline: 2px solid #31a050;
+    margin: 0px 0px 20px 0px;
+    padding: 11px 20px;
+    padding-bottom: 0px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    border-radius: 9px;
+/*  border-bottom: 1px solid #eee;*/
+/*  padding: 24px 0;*/
 }
 
 .faq-question {
