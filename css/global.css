@@ -1141,9 +1141,10 @@ a.nav-link.active {
   background-color: #FFF9F2;
   background: var(--color-background);
   overflow: hidden;
+    position: relative;
+
 }
-  position: relative;
-}
+
 
 .faq-bg-gradient {
   position: absolute;
