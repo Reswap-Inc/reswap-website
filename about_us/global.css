@@ -1,0 +1,63 @@
+:root {
+  --brand-green: #31a050;
+  --brand-dark-green: #207838;
+  --brand-light-bg: #fff9f2;
+  --text-light: #fff9f2;
+  --text-dark: #000000;
+  --text-green: #31a050;
+  --text-white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--brand-light-bg);
+  font-family: 'Inter', 'Hiragino Sans', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Frank Ruhl Libre', serif;
+  color: var(--text-green);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: var(--text-green);
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 48px;
+    }
+}
