@@ -33,12 +33,24 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="#section-communities" class="nav-link">Communities <img src="images/I4917_78_4917_67.svg"
-                                alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(36%) sepia(77%) saturate(453%) hue-rotate(90deg) brightness(0.95);"></a></li>
-                    <li><a href="about_us.html" class="nav-link active">About us</a></li>
+                    <li class="dropdown">
+                        <a href="#section-communities" class="nav-link nav-underline-only dropdown-toggle">Communities
+                            <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(36%) sepia(77%) saturate(453%) hue-rotate(90deg) brightness(0.95);">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
+                            <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
+                            <a class="dropdown-item" href="#section-communities">Housing (Coming Soon)</a>
+                            <a class="dropdown-item" href="#section-communities">Carpool (Coming Soon)</a>
+                        </div>
+                    </li>
+                    <li><a href="about_us.html" class="nav-link active nav-underline-only">About us</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary btn-download">Download App</a>
+            <div class="header-buttons">
+                <a href="https://reswap.tmithun.com/interaction/QFQxUxMJZGzFNsyAE0yui" class="btn btn-admin">Admin Login</a>
+                <a href="#" class="btn btn-primary btn-download">Download App</a>
+            </div>
         </div>
     </header>
 
@@ -105,7 +117,7 @@
             <div class="mission-grid">
                 <div class="mission-card">
                     <div class="mission-icon">
-                        <img src="about_us/images/4875_630.svg" alt="Community Icon">
+                        <img src="images/build_com.svg" alt="Community Icon">
                     </div>
                     <h3 class="mission-title">Building Community</h3>
                     <p class="mission-description">
@@ -114,7 +126,7 @@
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">
-                        <img src="about_us/images/4875_631.svg" alt="Sustainability Icon">
+                        <img src="images/leaf_green.svg" alt="Sustainability Icon">
                     </div>
                     <h3 class="mission-title">Promoting Sustainability</h3>
                     <p class="mission-description">
@@ -123,7 +135,7 @@
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">
-                        <img src="about_us/images/4875_632.svg" alt="Affordability Icon">
+                        <img src="images/money_green.svg" alt="Affordability Icon">
                     </div>
                     <h3 class="mission-title">Making College Affordable</h3>
                     <p class="mission-description">
@@ -225,9 +237,7 @@
             <p class="section-subtitle-dark">Be part of the movement to make college life more sustainable, affordable, and connected.</p>
             <div class="join-actions">
                 <div class="join-card">
-                    <div class="join-icon">
-                        <img src="images/insta_icon.png" alt="Download Icon">
-                    </div>
+                   
                     <h3 class="join-title">Download the App</h3>
                     <p class="join-description">Start buying, selling, and sharing with your campus community today.</p>
                     <div class="app-buttons">
@@ -237,14 +247,14 @@
                                 alt="Download on the App Store"></a>
                     </div>
                 </div>
-                <div class="join-card">
+                <!-- <div class="join-card">
                     <div class="join-icon">
                         <img src="images/insta_icon.png" alt="Community Icon">
                     </div>
                     <h3 class="join-title">Spread the Word</h3>
                     <p class="join-description">Help us grow by telling your friends about ReSwap and our mission.</p>
                     <a href="#" class="btn btn-primary">Share with Friends</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -256,16 +266,21 @@
                 <div class="footer-col footer-logo-col">
                     <a href="#" class="footer-logo">
                         <img src="images/4737_23538.svg" alt="ReSwap logo icon" class="footer-logo-icon">
-                        <span class="footer-logo-text">ReSwap</span>
+                                                <span class="footer-logo-text">ReSwap</span>
+                                                <style>
+                                                .footer-logo-icon,
+                                                .footer-social-col img {
+                                                    filter: brightness(0) saturate(100%) invert(92%) sepia(10%) saturate(400%) hue-rotate(20deg) brightness(1.1);
+                                                }
+                                                </style>
                     </a>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-heading">Explore</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#section-communities">Communities</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
-                        <li><a href="index.html#why-choose">How It Works</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
+                        <li><a href="#section-communities">Communities</a></li>
+                        <li><a href="#footer">About Us</a></li>
+                        <li><a href="#faq">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -281,16 +296,16 @@
                     <h4 class="footer-heading">Legal</h4>
                     <ul class="footer-links">
                         <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a></li>
                         <li><a href="#">Campus Guidelines</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-social-col">
                     <div class="social-icons">
-                        <a href="#"><img src="images/4737_23569.svg" alt="Social Icon"></a>
-                        <a href="#"><img src="images/4737_23570.svg" alt="Social Icon"></a>
-                        <a href="#"><img src="images/4737_23572.svg" alt="Social Icon"></a>
-                        <a href="#"><img src="images/4737_23573.svg" alt="Social Icon"></a>
+                        <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw"><img src="images/insta_icon.png" alt="Social Icon"></a>
+                        <a href="#"><img src="images/facebook_icon.png" alt="Social Icon"></a>
+                        <a href="#"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
+                        <!-- <a href="#"><img src="images/4737_23573.svg" alt="Social Icon"></a> -->
                     </div>
                 </div>
                 <div class="footer-col footer-subscribe-col">
@@ -302,7 +317,7 @@
                         <input type="email" placeholder="Your Email *">
                         <button type="submit" class="btn">Subscribe</button>
                     </form>
-                    <p class="subscribe-legal">By subscribing you agree to our <a href="#">Privacy Policy</a> and
+                    <p class="subscribe-legal">By subscribing you agree to our <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a> and
                         provide consent to receive updates from our company.</p>
                 </div>
             </div>
@@ -310,8 +325,8 @@
         <div class="footer-bottom">
             <div class="container footer-bottom-container">
                 <div class="footer-legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="https://reswap.tmithun.com:443/api/general/v1.2/files/pages/TermsAndCondition.html">Terms of Service</a>
                 </div>
                 <div class="footer-copyright">
                     © ReSwap 2025

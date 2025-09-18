@@ -12,6 +12,24 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     <script src="js/global.js" defer></script>
+    <style> 
+        .hero-content {
+  
+  text-align: center;
+  max-width: 560px;
+  /* margin: auto; */
+  margin-top: 100px;
+}
+
+.hero-section .app-buttons {
+  display: block;
+
+  /* gap: 26px; */
+  margin-bottom: 20px;
+  justify-content: left;
+
+}
+    </style>
 </head>
 
 <body>
@@ -25,21 +43,33 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#section-communities" class="nav-link">Communities <img src="images/I4917_78_4917_67.svg"
-                                alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(36%) sepia(77%) saturate(453%) hue-rotate(90deg) brightness(0.95);"></a></li>
-                                <li><a href="about_us.html" class="nav-link">About us</a></li>
+                    <li class="dropdown">
+                        <a href="#section-communities" class="nav-link nav-underline-only dropdown-toggle">Communities
+                            <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(36%) sepia(77%) saturate(453%) hue-rotate(90deg) brightness(0.95);">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
+                            <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
+                            <a class="dropdown-item" href="#section-communities">Housing (Coming Soon)</a>
+                            <a class="dropdown-item" href="#section-communities">Carpool (Coming Soon)</a>
+                        </div>
+                    </li>
+                                <li><a href="about_us.html" class="nav-link nav-underline-only">About us</a></li>
                     <!-- <li><a href="about.html" class="nav-link">About us</a></li> -->
 
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary btn-download">Download App</a>
+            <div class="header-buttons">
+                <a href="https://reswap.tmithun.com/interaction/QFQxUxMJZGzFNsyAE0yui" class="btn btn-admin">Admin Login</a>
+                <a href="#" class="btn btn-primary btn-download">Download App</a>
+            </div>
         </div>
     </header>
 
-    <section id="hero" class="hero-section">
-        <div class="container hero-container">
+    <section id="hero" class="hero-section" style="min-height: calc(100vh + 10px); background: url('images/reswap_hero1-02.svg') center center/cover no-repeat;">
+ 
             <div class="hero-content">
-                <h1 class="hero-title">Where Students <span>Swap, Share, Save.</span></h1>
+                <h1 class="hero-title">Where Students <span>Share, Swap, Save.</span></h1>
                 <p class="hero-subtitle">A student-powered marketplace built for USC. Find housing, gear, and clothes
                     right from your campus community.</p>
                 <div class="app-buttons">
@@ -49,10 +79,7 @@
                             alt="Download on the App Store"></a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/f23c21e44b8016deb3da644bc67a72deb1a46520.png" alt="ReSwap app on a smartphone">
-            </div>
-        </div>
+    
         
     </section>
 
@@ -105,9 +132,12 @@
                         <a href="fitshare.html" class="btn btn-primary" style="background-color: rgba(0, 138, 115); border-color: #0074D9; color: #fff;">Explore FitShare</a>
                     </div>
                     <div class="community-image-wrapper">
-                        <img src="images/I4935_395_4935_111.svg" alt="decorative blur" class="img-blur">
-                        <div class="img-placeholder-large"></div>
-                        <div class="img-placeholder-small"></div>
+                        
+                        <div class="img-placeholder-large">
+                            <img src="images/clothing_rack.png" alt="clothing_rack">
+                            
+                        </div>
+                        <!-- <div class="img-placeholder-small"></div> -->
                     </div>
                 </div>
                 <div class="community-card">
@@ -118,9 +148,10 @@
                         <a href="needshare.html" class="btn btn-primary" style="background-color: #df3f42; border-color: #df3f42; color: #fff;">Explore NeedShare</a>
                     </div>
                     <div class="community-image-wrapper">
-                        <img src="images/I4935_396_4935_134.svg" alt="decorative blur" class="img-blur">
-                        <div class="img-placeholder-large"></div>
-                        <div class="img-placeholder-small"></div>
+                        <div class="img-placeholder-large">
+                            <img src="images/essentials_com.png" alt="decorative blur">
+                        </div>
+
                     </div>
                 </div>
                 <div class="community-card">
@@ -131,9 +162,10 @@
                         <a href="#" class="btn" style="background-color: #bdbdbd; border-color: #bdbdbd; color: #fff;">Explore Housing</a>
                     </div>
                     <div class="community-image-wrapper">
-                        <img src="images/I4935_397_4935_111.svg" alt="decorative blur" class="img-blur">
-                        <div class="img-placeholder-large"></div>
-                        <div class="img-placeholder-small"></div>
+                        
+                        <div class="img-placeholder-large">
+                            <img src="images/housing_com.png" alt="unfurnished apartment">
+                        </div>
                     </div>
                 </div>
                 <div class="community-card">
@@ -146,9 +178,10 @@
                         <a href="#" class="btn" style="background-color: #bdbdbd; border-color: #bdbdbd; color: #fff;">Explore Carpool</a>
                     </div>
                     <div class="community-image-wrapper">
-                        <img src="images/I4935_398_4935_134.svg" alt="decorative blur" class="img-blur">
-                        <div class="img-placeholder-large"></div>
-                        <div class="img-placeholder-small"></div>
+    
+                        <div class="img-placeholder-large">
+                            <img src="images/car_driving.png" alt="car driving">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,9 +332,9 @@
                     </div>
                 </div>
             </div>
-            <div class="faq-cta">
+            <!-- <div class="faq-cta">
                 <a href="#" class="btn btn-primary">View More</a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -341,7 +374,6 @@
                     <ul class="footer-links">
                         <li><a href="#section-communities">Communities</a></li>
                         <li><a href="#footer">About Us</a></li>
-                        <li><a href="#why-choose">How It Works</a></li>
                         <li><a href="#faq">FAQs</a></li>
                     </ul>
                 </div>
@@ -358,13 +390,13 @@
                     <h4 class="footer-heading">Legal</h4>
                     <ul class="footer-links">
                         <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a></li>
                         <li><a href="#">Campus Guidelines</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-social-col">
                     <div class="social-icons">
-                        <a href="#"><img src="images/insta_icon.png" alt="Social Icon"></a>
+                        <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw"><img src="images/insta_icon.png" alt="Social Icon"></a>
                         <a href="#"><img src="images/facebook_icon.png" alt="Social Icon"></a>
                         <a href="#"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
                         <!-- <a href="#"><img src="images/4737_23573.svg" alt="Social Icon"></a> -->
@@ -379,7 +411,7 @@
                         <input type="email" placeholder="Your Email *">
                         <button type="submit" class="btn">Subscribe</button>
                     </form>
-                    <p class="subscribe-legal">By subscribing you agree to our <a href="#">Privacy Policy</a> and
+                    <p class="subscribe-legal">By subscribing you agree to our <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a> and
                         provide consent to receive updates from our company.</p>
                 </div>
             </div>
@@ -387,8 +419,8 @@
         <div class="footer-bottom">
             <div class="container footer-bottom-container">
                 <div class="footer-legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="https://reswap.tmithun.com:443/api/general/v1.2/files/pages/TermsAndCondition.html">Terms of Service</a>
                 </div>
                 <div class="footer-copyright">
                     © ReSwap 2025

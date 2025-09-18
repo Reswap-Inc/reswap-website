@@ -25,12 +25,25 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="#explore" class="nav-link">Communities <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(54%) sepia(99%) saturate(1000%) hue-rotate(-10deg) brightness(1.1);"></a></li>
+                    <li class="dropdown">
+                        <a href="#explore" class="nav-link nav-underline-only dropdown-toggle">Communities
+                            <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(54%) sepia(99%) saturate(1000%) hue-rotate(-10deg) brightness(1.1);">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
+                            <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
+                            <a class="dropdown-item" href="#explore">Housing (Coming Soon)</a>
+                            <a class="dropdown-item" href="#explore">Carpool (Coming Soon)</a>
+                        </div>
+                    </li>
                     <!-- <li><a href="about_us.html" class="nav-link">About us M</a></li> -->
-                    <li><a href="about.html" class="nav-link">About us</a></li>
+                    <li><a href="about_us.html" class="nav-link nav-underline-only">About us</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary btn-download">Download App</a>
+                <div class="header-buttons">
+                    <a href="https://reswap.tmithun.com/interaction/QFQxUxMJZGzFNsyAE0yui" class="btn btn-admin">Admin Login</a>
+                    <a href="#" class="btn btn-primary btn-download">Download App</a>
+                </div>
         </div>
     </header>
 
@@ -39,6 +52,7 @@
     <section class="hero-section">
             <style>
                 .hero-section {
+                    min-height: calc(100vh + 10px);
                     background: url('images/needshare hero.png') center center/cover no-repeat;
                 }
             </style>
@@ -68,17 +82,17 @@
                 <p class="section-subtitle" style="width: calc(80%); max-width: none;">NeedShare is your campus exchange for gently used must‑haves. Instead of buying new, grab what another student is done with. Cheaper for you, better for the planet.</p>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <img src="images/4874_359.svg" alt="Textbooks" class="feature-icon">
+                        <img src="images/money.svg" alt="Textbooks" class="feature-icon">
                         <h3 class="feature-title">Save Money & Space</h3>
                         <p class="feature-description">Get student‑approved gear at a fraction of the cost.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="images/4874_384.svg" alt="Electronics" class="feature-icon">
+                        <img src="images/book_beige.svg" alt="Electronics" class="feature-icon">
                         <h3 class="feature-title">Sustainable Finds</h3>
                         <p class="feature-description">Reduce waste and help the planet, one swap at a time.</p>
                     </div>
                     <div class="feature-card">
-                        <img src="images/4874_393.svg" alt="Kitchen Items" class="feature-icon">
+                        <img src="images/students_beige.svg" alt="Kitchen Items" class="feature-icon">
                         <h3 class="feature-title">Student-to-Student Trust</h3>
                         <p class="feature-description">Every listing is posted by a USC student.</p>
                     </div>
@@ -120,19 +134,19 @@
             <div class="container">
                 <h2 class="community-nav-title" style="font-size: 2.5rem;">Explore Other ReSwap Communities</h2>
                 <div class="community-nav-grid">
-                    <div class="community-nav-card current">
+                    <div class="community-nav-card current needshare-bg">
                         <h3>NeedShare</h3>
                         <p>Pick up student‑approved essentials at a fraction of the cost.</p>
                     </div>
-                    <div class="community-nav-card" onclick="window.location.href='fitshare.html'">
+                    <div class="community-nav-card fitshare-bg" onclick="window.location.href='fitshare.html'">
                         <h3>FitShare</h3>
                         <p>Swap and shop outfits for game day, formals, and beyond.</p>
                     </div>
-                    <div class="community-nav-card">
+                    <div class="community-nav-card rideshare-bg">
                         <h3>RideShare</h3>
                         <p>Grab safe, affordable rides with fellow students.</p>
                     </div>
-                    <div class="community-nav-card">
+                    <div class="community-nav-card spaceshare-bg">
                         <h3>SpaceShare</h3>
                         <p>Find subleases and room swaps without the stress.</p>
                     </div>
@@ -177,7 +191,6 @@
                     <ul class="footer-links">
                         <li><a href="index.html#section-communities">Communities</a></li>
                         <li><a href="index.html#footer">About Us</a></li>
-                        <li><a href="index.html#why-choose">How It Works</a></li>
                         <li><a href="index.html#faq">FAQs</a></li>
                     </ul>
                 </div>
@@ -194,13 +207,13 @@
                     <h4 class="footer-heading">Legal</h4>
                     <ul class="footer-links">
                         <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a></li>
                         <li><a href="#">Campus Guidelines</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-social-col">
                     <div class="social-icons">
-                        <a href="#"><img src="images/insta_icon.png" alt="Social Icon"></a>
+                        <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw"><img src="images/insta_icon.png" alt="Social Icon"></a>
                         <a href="#"><img src="images/facebook_icon.png" alt="Social Icon"></a>
                         <a href="#"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
                         <!-- <a href="#"><img src="images/4737_23573.svg" alt="Social Icon"></a> -->
@@ -221,7 +234,7 @@
                         <input type="email" placeholder="Your Email *">
                         <button type="submit">Subscribe</button>
                     </form>
-                    <p class="subscribe-legal">By subscribing you agree to our <a href="#">Privacy Policy</a> & provide
+                    <p class="subscribe-legal">By subscribing you agree to our <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a> & provide
                         consent to
                         receive updates from NeedShare.</p>
                 </div>
@@ -230,8 +243,8 @@
         <div class="footer-bottom">
             <div class="container footer-bottom-container">
                 <div class="footer-legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="https://reswap.tmithun.com:443/api/general/v1.2/files/pages/TermsAndCondition.html">Terms of Service</a>
                 </div>
                 <div class="footer-copyright">
                     © ReSwap 2025
