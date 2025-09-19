@@ -488,6 +488,7 @@ a.nav-link.active {
   position: relative;
   margin-top: -60px;
   border-radius: 60px 60px 0 0;
+  padding-bottom: 160px;
 }
 
 .why-choose-section::before {
@@ -583,8 +584,9 @@ a.nav-link.active {
 /* Communities Section */
 .communities-section {
   padding: 100px 0;
-  /* background-color: var(--color-background); */
+  background-color: var(--color-background);
   position: relative;
+  margin-top: -60px;
   border-radius: 60px 60px 0 0;
 }
 
@@ -1382,7 +1384,8 @@ a.nav-link.active {
   padding: 100px 0;
   text-align: center;
   color: var(--color-text-light);
-  margin-top: -60px;
+  padding-top: 50px;
+  /* margin-top: -60px; */
   border-radius: 60px 60px 0 0;
 }
 
@@ -1606,6 +1609,8 @@ a.nav-link.active {
   padding: 100px 0;
   background-color: var(--color-background);
   position: relative;
+  margin-top: -60px;
+  border-radius: 60px 60px 0 0;
 }
 
 .how-it-works-section::before {
