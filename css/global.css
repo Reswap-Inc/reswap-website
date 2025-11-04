@@ -1024,16 +1024,14 @@ a.nav-link.active {
   
   /* Hero Section */
   .hero-section {
-    padding: 120px 0 60px;
+    padding: 80px 0 40px;
   }
-  
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
-  }
-  
-  .hero-content {
+  }  .hero-content {
     margin-top: 40px;
   }
   
@@ -1075,7 +1073,7 @@ a.nav-link.active {
   
   /* Why Choose Section */
   .why-choose-section {
-    padding: 60px 0 80px;
+    padding: 50px 0 50px;
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
   }
@@ -1126,17 +1124,15 @@ a.nav-link.active {
   
   /* Communities Section */
   .communities-section {
-    padding: 60px 0;
+    padding: 50px 0 40px;
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
   }
-  
+
   .communities-list {
-    margin-top: 40px;
-    gap: 40px;
-  }
-  
-  .community-nav-title {
+    margin-top: 30px;
+    gap: 30px;
+  }  .community-nav-title {
     font-size: 36px;
   }
   
@@ -1212,7 +1208,7 @@ a.nav-link.active {
   
   /* Comparison Section */
   .comparison-section {
-    padding: 60px 0;
+    padding: 50px 0 40px;
   }
   
   .comparison-table {
@@ -1241,7 +1237,7 @@ a.nav-link.active {
   
   /* FAQ Section */
   .faq-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   
   .faq-item {
@@ -1262,7 +1258,7 @@ a.nav-link.active {
   
   /* CTA Section */
   .cta-section {
-    padding: 60px 0;
+    padding: 50px 0;
   }
   
   .cta-title {
@@ -1278,13 +1274,45 @@ a.nav-link.active {
   }
   
   /* How It Works */
-  .how-it-works-card {
-    min-width: auto;
-    padding: 30px 24px;
+  .how-it-works-section {
+    padding: 50px 0 40px;
+    margin-top: -40px;
   }
   
-  .how-it-works-card h3 {
-    font-size: 24px;
+    .how-it-works-section .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .how-it-works-grid {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .how-it-works-card {
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 24px;
+        flex: none;
+    }
+
+    .how-it-works-card h3 {
+        font-size: 24px;
+    }  /* Community Nav Section */
+  .community-nav-section {
+    padding: 40px 0;
+  }
+  
+  .community-nav-section .section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  /* Info Section (Why X Matters) */
+  .info-section {
+    padding: 40px 0;
   }
   
   /* Community Nav Cards */ 
@@ -1430,7 +1458,7 @@ a.nav-link.active {
   }
   
   .why-choose-section {
-    padding: 50px 0 60px;
+    padding: 50px 0 100px;
   }
   
   .communities-section {
