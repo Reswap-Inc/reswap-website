@@ -1557,6 +1557,441 @@ a.nav-link.active {
   }
 }
 
+/* Mobile L - 425px - Optimized for larger mobile phones */
+@media (max-width: 425px) {
+  /* Container adjustments */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  /* Typography fine-tuning */
+  .hero-title {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  
+  .hero-subtitle,
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .section-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  
+  /* App buttons spacing */
+  .app-buttons {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .app-buttons img {
+    height: 38px;
+    max-width: 145px;
+  }
+  
+  /* Community navigation cards */
+  .community-nav-grid {
+    gap: 14px;
+  }
+  
+  .community-nav-card {
+    padding: 20px 14px;
+    min-height: 120px;
+  }
+  
+  .community-nav-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .community-nav-card p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  /* How it works section */
+  .how-it-works-grid {
+    gap: 16px;
+  }
+  
+  .how-it-works-card {
+    padding: 22px 18px;
+  }
+  
+  .how-it-works-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+  
+  .how-it-works-card p,
+  .how-it-works-card li {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  /* Footer adjustments */
+  .footer-column h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column a {
+    font-size: 13px;
+  }
+  
+  .footer-newsletter input {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  
+  .footer-newsletter button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile M - 375px - Standard mobile phone size */
+@media (max-width: 375px) {
+  /* Further container reduction */
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  
+  /* Typography optimization */
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  
+  .hero-subtitle,
+  .hero-description {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .info-title {
+    font-size: 24px;
+  }
+  
+  .cta-title {
+    font-size: 24px;
+  }
+  
+  /* App buttons */
+  .app-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .app-buttons img {
+    height: 42px;
+    max-width: 160px;
+    width: 100%;
+  }
+  
+  /* Feature cards */
+  .feature-card {
+    padding: 18px 14px !important;
+  }
+  
+  .feature-title {
+    font-size: 15px !important;
+  }
+  
+  .feature-description {
+    font-size: 12px !important;
+  }
+  
+  /* Community cards */
+  .community-nav-card {
+    padding: 18px 12px;
+    min-height: 110px;
+  }
+  
+  .community-nav-card h3 {
+    font-size: 17px;
+  }
+  
+  .community-nav-card p {
+    font-size: 12px;
+  }
+  
+  /* How it works cards */
+  .how-it-works-card {
+    padding: 20px 16px;
+  }
+  
+  .how-it-works-card h3 {
+    font-size: 18px;
+  }
+  
+  .how-it-works-card p,
+  .how-it-works-card li {
+    font-size: 12px;
+  }
+  
+  /* Footer spacing */
+  .footer-main {
+    padding: 40px 0 25px;
+  }
+  
+  .footer-columns {
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    padding: 16px 0;
+  }
+  
+  .footer-bottom-links {
+    gap: 12px;
+    font-size: 12px;
+  }
+  
+  /* Comparison table mobile optimization */
+  .comparison-table {
+    margin: 20px -14px;
+    font-size: 10px;
+  }
+  
+  .header-cell,
+  .cell {
+    padding: 8px 4px;
+    font-size: 9px;
+  }
+}
+
+/* Mobile S - 320px - Smallest mobile devices */
+@media (max-width: 320px) {
+  /* Minimal container padding */
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  /* Compact typography */
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle,
+  .hero-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+  
+  .info-title,
+  .cta-title,
+  .community-nav-title {
+    font-size: 22px;
+  }
+  
+  .info-description {
+    font-size: 13px;
+  }
+  
+  /* Compact spacing */
+  .hero-section {
+    padding: 90px 0 40px;
+  }
+  
+  .why-choose-section,
+  .communities-section,
+  .comparison-section,
+  .faq-section,
+  .cta-section {
+    padding: 40px 0;
+  }
+  
+  /* App buttons - full width stacked */
+  .app-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .app-buttons img {
+    height: 40px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Feature cards - ultra compact */
+  .feature-card {
+    padding: 16px 12px !important;
+  }
+  
+  .feature-icon-wrapper {
+    margin-bottom: 10px !important;
+  }
+  
+  .feature-icon-bg, .feature-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  .feature-icon-fg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  .feature-title {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .feature-description {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Community navigation cards - compact */
+  .community-nav-grid {
+    gap: 12px;
+  }
+  
+  .community-nav-card {
+    padding: 16px 10px;
+    min-height: 100px;
+  }
+  
+  .community-nav-card h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .community-nav-card p {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+  
+  /* How it works cards - minimal padding */
+  .how-it-works-grid {
+    gap: 14px;
+  }
+  
+  .how-it-works-card {
+    padding: 18px 14px;
+  }
+  
+  .how-it-works-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  
+  .how-it-works-card p {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  
+  .how-it-works-card li {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  
+  /* Footer compact */
+  .footer-main {
+    padding: 35px 0 20px;
+  }
+  
+  .footer-columns {
+    gap: 25px;
+  }
+  
+  .footer-column h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a,
+  .footer-column p {
+    font-size: 12px;
+  }
+  
+  .footer-newsletter input {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+  
+  .footer-newsletter button {
+    font-size: 12px;
+    padding: 9px 16px;
+  }
+  
+  .footer-bottom {
+    padding: 14px 0;
+    font-size: 11px;
+  }
+  
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 11px;
+  }
+  
+  /* FAQ compact */
+  .faq-item {
+    padding: 12px;
+  }
+  
+  .faq-question {
+    font-size: 14px;
+  }
+  
+  .faq-answer {
+    font-size: 12px;
+  }
+  
+  /* CTA section */
+  .cta-section {
+    padding: 40px 0;
+  }
+  
+  .cta-button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+  
+  /* Community images - smallest size */
+  .img-placeholder-large {
+    max-width: 220px !important;
+    height: 130px !important;
+  }
+  
+  .img-placeholder-small {
+    max-width: 130px !important;
+    height: 65px !important;
+  }
+  
+  .community-image-wrapper {
+    height: 150px !important;
+  }
+}
+
 /* Page-specific styles */
 
 /* Comparison Section (Homepage only) */
@@ -2022,7 +2457,7 @@ a.nav-link.active {
   border-radius: 30px;
   transition: transform 0.3s ease;
   flex: 1;
-  min-width: 350px;
+  min-width: 320px;
 }
 
 .how-it-works-card:hover {
@@ -2504,5 +2939,170 @@ a.nav-link.active {
   
   .hero-video-placeholder {
     height: 180px;
+  }
+}
+
+/* About Us page - Mobile L (425px) */
+@media (max-width: 435px) {
+  .story-subtitle {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  
+  .stat-number {
+    font-size: 30px;
+  }
+  
+  .stat-label {
+    font-size: 13px;
+  }
+  
+  .mission-card,
+  .value-item {
+    padding: 20px 16px;
+  }
+  
+  .mission-card h3,
+  .value-title {
+    font-size: 20px;
+  }
+  
+  .mission-card p,
+  .value-content p {
+    font-size: 13px;
+  }
+  
+  .team-card h3 {
+    font-size: 18px;
+  }
+  
+  .team-card p {
+    font-size: 13px;
+  }
+}
+
+/* About Us page - Mobile M (375px) */
+@media (max-width: 375px) {
+  .story-subtitle {
+    font-size: 20px;
+  }
+  
+  .story-stats {
+    gap: 16px;
+  }
+  
+  .stat-item {
+    padding: 18px 12px;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+  }
+  
+  .mission-card,
+  .value-item {
+    padding: 18px 14px;
+  }
+  
+  .mission-card h3,
+  .value-title {
+    font-size: 19px;
+  }
+  
+  .mission-card p,
+  .value-content p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  .team-card {
+    padding: 20px 14px;
+  }
+  
+  .team-card h3 {
+    font-size: 17px;
+  }
+  
+  .team-card p {
+    font-size: 12px;
+  }
+  
+  .hero-video-placeholder {
+    height: 160px;
+  }
+}
+
+/* About Us page - Mobile S (320px) */
+@media (max-width: 320px) {
+  .story-subtitle {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+  
+  .story-stats {
+    gap: 14px;
+  }
+  
+  .stat-item {
+    padding: 16px 10px;
+  }
+  
+  .stat-number {
+    font-size: 26px;
+  }
+  
+  .stat-label {
+    font-size: 11px;
+  }
+  
+  .mission-card,
+  .value-item {
+    padding: 16px 12px;
+  }
+  
+  .mission-card h3,
+  .value-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .mission-card p,
+  .value-content p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  
+  .team-card {
+    padding: 18px 12px;
+  }
+  
+  .team-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .team-card p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  
+  .hero-video-placeholder {
+    height: 150px;
+  }
+  
+  .join-action-card {
+    padding: 24px 16px;
+  }
+  
+  .join-action-card h3 {
+    font-size: 18px;
+  }
+  
+  .join-action-card p {
+    font-size: 12px;
   }
 }
