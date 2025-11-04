@@ -327,6 +327,18 @@ class MobileMenu {
             nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
             nav.style.padding = '20px';
             nav.style.zIndex = '1000';
+            
+            // Add header buttons to mobile menu if not already present
+            const existingButtons = nav.querySelector('.mobile-menu-buttons');
+            if (!existingButtons) {
+              const headerButtons = document.querySelector('.header-buttons');
+              if (headerButtons) {
+                const mobileButtons = document.createElement('div');
+                mobileButtons.className = 'mobile-menu-buttons';
+                mobileButtons.innerHTML = headerButtons.innerHTML;
+                nav.appendChild(mobileButtons);
+              }
+            }
           }
         }
       }
