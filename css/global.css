@@ -1,3 +1,14 @@
+/*
+  Responsive Breakpoints (desktop-first overrides consolidated)
+  - Mobile S: 320px
+  - Mobile M: 375px
+  - Mobile L: 435px
+  - Tablet:   768px
+  - Laptop:   1024px
+  - Laptop L: 1440px
+  - TV:       2560px
+*/
+
 /* Slightly smaller section titles for About page */
 .section-title-small {
   font-size: 2.8rem !important;
@@ -228,8 +239,8 @@ a {
   /* margin-left: auto; */
 }
 
-/* Remove right padding inside header so the rightmost button is flush on desktop */
-@media (min-width: 769px) {
+/* Remove right padding inside header so the rightmost button is flush on desktop/tablet */
+@media (min-width: 768px) {
   .site-header .container {
     padding-right: 0;
   }
@@ -896,8 +907,13 @@ a.nav-link.active {
   color: var(--color-text-light);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* Laptop and down */
+@media (max-width: 1024px) {
+  /* Container breathing room on laptop */
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .how-it-works-grid {
     flex-direction: column;
     align-items: center;
@@ -983,6 +999,7 @@ a.nav-link.active {
   color: white !important;
 }
 
+/* Tablet and down */
 @media (max-width: 768px) {
   .container {
     padding-left: 20px;
@@ -1363,7 +1380,8 @@ a.nav-link.active {
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile L and down */
+@media (max-width: 435px) {
   /* Header */
   .site-header {
     padding: 10px 0;
@@ -1555,10 +1573,15 @@ a.nav-link.active {
   .faq-answer {
     font-size: 13px;
   }
+  /* About Us: stack stats vertically on narrow screens */
+  .story-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
-/* Mobile L - 425px - Optimized for larger mobile phones */
-@media (max-width: 425px) {
+/* Mobile L - 435px - Optimized for larger mobile phones */
+@media (max-width: 435px) {
   /* Container adjustments */
   .container {
     padding-left: 16px;
@@ -1791,11 +1814,30 @@ a.nav-link.active {
     margin-bottom: 12px;
     line-height: 1.2;
   }
+  /* Mobile S: reduce hero title width by 30px and center */
+  .hero-section .hero-title {
+    display: block;
+    max-width: calc(100% - 30px) !important;
+    margin: 0 auto 12px !important;
+    text-align: center;
+    font-size: 31px !important; /* reduced by 5px per request */
+    line-height: 1.18;
+  }
+  /* Mobile S: force second line of hero title to next line */
+  .hero-section .hero-title .hero-line-2 {
+    display: block;
+  }
   
   .hero-subtitle,
   .hero-description {
     font-size: 13px;
     line-height: 1.4;
+  }
+  /* Mobile S: make hero subtitle 20px narrower and centered */
+  .hero-section .hero-subtitle {
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .section-title {
@@ -1838,6 +1880,18 @@ a.nav-link.active {
     max-width: 100%;
     width: 100%;
   }
+
+  /* Homepage hero: match Mobile M layout exactly at Mobile S */
+  .hero-section .app-buttons {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-section .app-buttons img {
+    height: 42px;
+    max-width: 160px;
+    width: 100%;
+  }
   
   /* Feature cards - ultra compact */
   .feature-card {
@@ -1867,6 +1921,8 @@ a.nav-link.active {
     font-size: 11px !important;
     line-height: 1.3 !important;
   }
+  /* Mobile S: extra bottom spacing under feature cards */
+  .why-choose-section .features-grid { padding-bottom: 30px; }
   
   /* Community navigation cards - compact */
   .community-nav-grid {
@@ -2923,26 +2979,25 @@ a.nav-link.active {
   }
 }
 
-@media (max-width: 480px) {
-  .story-stats {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .story-subtitle {
-    font-size: 24px;
-  }
-  
-  .value-title {
-    font-size: 22px;
-  }
-  
-  .hero-video-placeholder {
-    height: 180px;
-  }
+/* Removed duplicate consolidated empty media queries to keep CSS lean */
+
+/* Television - 2560px up: center and increase gutters to avoid overly wide lines */
+/* Laptop L - 1440px: reserved (current layout scales well) */
+@media (min-width: 1440px) {
+  /* intentionally no changes at 1440px; keeping for clarity */
 }
 
-/* About Us page - Mobile L (425px) */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1600px; /* prevent ultra-wide content */
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .section-title { letter-spacing: 0.2px; }
+  .hero-title { letter-spacing: 0.2px; }
+}
+
+/* About Us page - Mobile L (435px) */
 @media (max-width: 435px) {
   .story-subtitle {
     font-size: 22px;
