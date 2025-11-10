@@ -215,19 +215,24 @@ class FormManager {
     // Simulate subscription process
     const button = form.querySelector('button');
     const originalText = button.textContent;
+    const live = form.querySelector('[aria-live]');
     
     button.textContent = 'Subscribing...';
     button.disabled = true;
+    if (live) live.textContent = 'Submitting your subscription...';
     
     setTimeout(() => {
       button.textContent = 'Subscribed!';
       button.style.backgroundColor = '#31a050';
-      form.querySelector('input').value = '';
+      const input = form.querySelector('input');
+      if (input) input.value = '';
+      if (live) live.textContent = 'Subscription successful.';
       
       setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
         button.style.backgroundColor = '';
+        if (live) live.textContent = '';
       }, 2000);
     }, 1000);
   }
