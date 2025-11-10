@@ -995,8 +995,15 @@ a.nav-link.active {
 }
 
 .mobile-nav .nav-link.active {
-  background-color: var(--color-primary);
-  color: white !important;
+  background: transparent;
+  color: var(--color-primary) !important;
+}
+/* Keep 'Home' text green without green background when dropdown (mobile) menu is used */
+.mobile-nav .nav-link.active[href*="index.html"],
+.mobile-nav .nav-link.active[href="#"],
+.mobile-nav .nav-link.active:first-child {
+  background: transparent !important;
+  color: var(--color-primary) !important;
 }
 
 /* Tablet and down */
@@ -1867,6 +1874,10 @@ a.nav-link.active {
   .cta-section {
     padding: 40px 0;
   }
+  /* Mobile S: make communities subtitle 5px smaller */
+  .communities-section .section-subtitle-dark {
+    font-size: 11px;
+  }
   
   /* App buttons - full width stacked */
   .app-buttons {
@@ -1888,9 +1899,33 @@ a.nav-link.active {
     gap: 12px;
   }
   .hero-section .app-buttons img {
-    height: 42px;
-    max-width: 160px;
-    width: 100%;
+  width: 90px;
+  height: auto;
+  max-width: 90px;
+  }
+
+
+/* Mobile M - 321px to 375px: homepage hero title sizing and forced line break */
+@media (min-width: 321px) and (max-width: 375px) {
+  /* Scope to homepage hero only via #hero */
+  #hero .hero-title {
+    font-size: 31px;
+    line-height: 1.18;
+  }
+  #hero .hero-title .hero-line-2 {
+    display: block; /* force second part onto a new line */
+  }
+}
+  /* Mobile S: bottom CTA app buttons side-by-side at fixed width */
+  .cta-section .app-buttons {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 16px;
+  }
+  .cta-section .app-buttons img {
+    width: 100px;
+    height: auto;
+    max-width: 100px;
   }
   
   /* Feature cards - ultra compact */
@@ -2045,6 +2080,11 @@ a.nav-link.active {
   
   .community-image-wrapper {
     height: 150px !important;
+  }
+
+  /* NeedShare page: Mobile S heading size */
+  [data-theme="needshare"] .how-it-works-section .section-title {
+    font-size: 36px !important;
   }
 }
 
@@ -2513,7 +2553,7 @@ a.nav-link.active {
   border-radius: 30px;
   transition: transform 0.3s ease;
   flex: 1;
-  min-width: 320px;
+  /* min-width: 320px; */
 }
 
 .how-it-works-card:hover {
@@ -3099,6 +3139,7 @@ a.nav-link.active {
   }
   
   .story-stats {
+    flex-direction: column; /* revert to column on Mobile S */
     gap: 14px;
   }
   
