@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitShare - Fitness & Fashion Community | ReSwap</title>
-    <meta name="description" content="FitShare helps USC students swap and shop outfits for game day, formals, internships, and more—sustainably and affordably.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -33,7 +32,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
                             <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
-                            <a class="dropdown-item" href="#explore">Housing (Coming Soon)</a>
+                            <a class="dropdown-item" href="spaceshare.html">SpaceShare (Housing)</a>
                             <a class="dropdown-item" href="#explore">Carpool (Coming Soon)</a>
                         </div>
                     </li>
@@ -43,7 +42,7 @@
             </nav>
             <div class="header-buttons">
                 <a href="https://reswap.tmithun.com/interaction/QFQxUxMJZGzFNsyAE0yui" class="btn btn-admin">Admin Login</a>
-                <a href="#" class="btn btn-primary btn-download is-disabled" aria-disabled="true" role="link">Download App</a>
+                <a href="#" class="btn btn-primary btn-download">Download App</a>
             </div>
         </div>
     </header>
@@ -56,9 +55,9 @@
                 <h1 class="hero-title">FitShare</h1>
                 <p class="hero-subtitle">FitShare is where USC students trade, sell, and discover outfits for every moment—game days, formals, themed parties, internships, and more.</p>
                 <div class="app-buttons">
-                    <a href="#" class="is-disabled" aria-disabled="true" role="link" aria-label="Google Play (coming soon)"><img src="images/1c41e25ab93db7fcdfabed0036de688a198b3936.png"
+                    <a href="#"><img src="images/1c41e25ab93db7fcdfabed0036de688a198b3936.png"
                             alt="Get it on Google Play"></a>
-                    <a href="#" class="is-disabled" aria-disabled="true" role="link" aria-label="App Store (coming soon)"><img src="images/cd59a9d0558a462e95b7f3ccd162dc407b90cea8.png"
+                    <a href="#"><img src="images/cd59a9d0558a462e95b7f3ccd162dc407b90cea8.png"
                             alt="Download on the App Store"></a>
                 </div>
             </div>
@@ -138,7 +137,7 @@
                         <h3>RideShare</h3>
                         <p>Grab safe, affordable rides with fellow students.</p>
                     </div>
-                    <div class="community-nav-card spaceshare-bg">
+                    <div class="community-nav-card spaceshare-bg" onclick="window.location.href='spaceshare.html'">
                         <h3>SpaceShare</h3>
                         <p>Find subleases and room swaps without the stress.</p>
                     </div>
@@ -164,7 +163,7 @@
         <img src="images/4874_527.svg" class="cta-blur-bg" alt="">
         <div class="container cta-container">
             <h2 class="cta-title">Start Your FitShare Journey Today</h2>
-            <a href="#" class="btn btn-cta is-disabled" aria-disabled="true" role="link">Join the Community</a>
+            <a href="#" class="btn btn-cta">Join the Community</a>
         </div>
     </section>
 
@@ -205,11 +204,17 @@
                 </div>
                 <div class="footer-col footer-social-col">
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw" target="_blank" rel="noopener noreferrer" aria-label="Follow ReSwap on Instagram"><img src="images/insta_icon.png" alt="Instagram"></a>
-                        <a href="#" class="is-disabled" aria-disabled="true" role="link" aria-label="Facebook (coming soon)"><img src="images/facebook_icon.png" alt="Facebook"></a>
-                        <a href="https://share.google/CBvmgw6fDsq2qk2IF" target="_blank" rel="noopener noreferrer" aria-label="ReSwap on LinkedIn"><img src="images/linkedin_icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw"><img src="images/insta_icon.png" alt="Social Icon"></a>
+                        <a href="#"><img src="images/facebook_icon.png" alt="Social Icon"></a>
+                        <a href="https://share.google/CBvmgw6fDsq2qk2IF"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
                         <!-- <a href="#"><img src="images/4737_23573.svg" alt="Social Icon"></a> -->
                     </div>
+                    <style>
+                        .footer-logo-icon,
+                        .footer-social-col img {
+                            filter: brightness(0) saturate(100%) invert(92%) sepia(10%) saturate(400%) hue-rotate(20deg) brightness(1.1);
+                        }
+                    </style>
                 </div>
                 <div class="footer-col footer-subscribe-col">
                     <h4 class="footer-heading">Stay in the Loop</h4>
