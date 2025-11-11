@@ -1415,6 +1415,30 @@ a.nav-link.active {
   }
 }
 
+/* Exact tablet width (iPad portrait 768px): left-align hero like desktop */
+@media (width: 768px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+  }
+  .hero-content {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .hero-title,
+  .hero-subtitle,
+  .hero-description,
+  .hero-welcome {
+    text-align: left;
+    margin-left: 0;
+  }
+  .hero-section .app-buttons {
+    align-items: flex-start;
+  }
+}
+
 /* Mobile L and down */
 @media (max-width: 435px) {
   /* Header */
