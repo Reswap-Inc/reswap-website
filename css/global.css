@@ -215,6 +215,7 @@ a {
   background-color: var(--color-primary);
   color: var(--color-text-light);
   padding: 10px 24px;
+  margin-right: 15px;
 }
 
 .btn-cta {
@@ -2568,6 +2569,7 @@ a.nav-link.active {
   color: #fff;
   position: relative;
   overflow: hidden;
+  border-color:#DF3F42;
 }
 .community-nav-card.needshare-bg::before {
   content: "";
@@ -2590,6 +2592,7 @@ a.nav-link.active {
   color: #fff;
   position: relative;
   overflow: hidden;
+  border-color:#008A73;
 }
 .community-nav-card.fitshare-bg::before {
   content: "";
@@ -2612,6 +2615,7 @@ a.nav-link.active {
   color: #fff;
   position: relative;
   overflow: hidden;
+  border-color: #9168E5;
 }
 .community-nav-card.rideshare-bg::before {
   content: "";
@@ -2634,6 +2638,7 @@ a.nav-link.active {
   color: #fff;
   position: relative;
   overflow: hidden;
+  border-color:#50A6CA;
 }
 .community-nav-card.spaceshare-bg::before {
   content: "";
