@@ -101,6 +101,33 @@ button.is-disabled,
   --color-text-primary: #df3f42;
 }
 
+/* SpaceShare Theme */
+[data-theme="spaceshare"] {
+  --color-primary: #50A6CA;
+  --color-primary-dark: #3e86a3;
+  --color-text-primary: #50A6CA;
+}
+
+/* SpaceShare accents: ensure key elements use theme blue */
+[data-theme="spaceshare"] .hero-title,
+[data-theme="spaceshare"] .section-title,
+[data-theme="spaceshare"] .community-nav-title {
+  color: var(--color-primary);
+}
+
+[data-theme="spaceshare"] .btn-primary,
+[data-theme="spaceshare"] .btn-cta {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* SpaceShare Theme */
+[data-theme="spaceshare"] {
+  --color-primary: #50A6CA;
+  --color-primary-dark: #3e86a3;
+  --color-text-primary: #50A6CA;
+}
+
 /* Reset and Base Styles */
 * {
   box-sizing: border-box;

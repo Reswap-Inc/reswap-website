@@ -9,6 +9,7 @@ reswap-website/
 ├── index.html              # Main homepage
 ├── fitshare.html           # FitShare community page
 ├── needshare.html          # NeedShare community page
+├── spaceshare.html         # SpaceShare housing page
 ├── css/
 │   └── global.css          # Unified CSS with theme system
 ├── js/
@@ -29,6 +30,7 @@ reswap-website/
   - Homepage: Green theme (#31a050)
   - FitShare: Teal theme (#008a73)
   - NeedShare: Red theme (#df3f42)
+  - SpaceShare: Blue theme (#50A6CA)
 - **Interactive Elements**: FAQ toggles, smooth scrolling, form handling
 - **Mobile Responsive**: Works on all device sizes
 
@@ -41,7 +43,7 @@ reswap-website/
 - **Homepage** (`index.html`): Main landing page with overview of all communities
 - **FitShare** (`fitshare.html`): Fitness equipment and fashion sharing community
 - **NeedShare** (`needshare.html`): Essential items and daily necessities community
-- **Future Communities**: Placeholders for Housing and Carpool communities
+- **Future Communities**: Placeholders for Carpool community
 
 ## Technical Details
 - **CSS**: Uses CSS custom properties for theme switching

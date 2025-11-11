@@ -21,6 +21,8 @@ class ThemeManager {
       this.setTheme('fitshare');
     } else if (path.includes('needshare') || page === 'needshare') {
       this.setTheme('needshare');
+    } else if (path.includes('spaceshare') || page === 'spaceshare') {
+      this.setTheme('spaceshare');
     } else {
       this.setTheme('default');
     }
@@ -44,6 +46,8 @@ class ThemeManager {
         link.classList.add('active');
       } else if (this.currentTheme === 'needshare' && link.textContent.includes('NeedShare')) {
         link.classList.add('active');
+      } else if (this.currentTheme === 'spaceshare' && link.textContent.includes('SpaceShare')) {
+        link.classList.add('active');
       } else if (this.currentTheme === 'default' && link.textContent.includes('Home')) {
         link.classList.add('active');
       }
@@ -59,6 +63,8 @@ class ThemeManager {
           this.setTheme('fitshare');
         } else if (text.includes('NeedShare')) {
           this.setTheme('needshare');
+        } else if (text.includes('SpaceShare')) {
+          this.setTheme('spaceshare');
         } else if (text.includes('Home')) {
           this.setTheme('default');
         }
@@ -215,24 +221,19 @@ class FormManager {
     // Simulate subscription process
     const button = form.querySelector('button');
     const originalText = button.textContent;
-    const live = form.querySelector('[aria-live]');
     
     button.textContent = 'Subscribing...';
     button.disabled = true;
-    if (live) live.textContent = 'Submitting your subscription...';
     
     setTimeout(() => {
       button.textContent = 'Subscribed!';
       button.style.backgroundColor = '#31a050';
-      const input = form.querySelector('input');
-      if (input) input.value = '';
-      if (live) live.textContent = 'Subscription successful.';
+      form.querySelector('input').value = '';
       
       setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
         button.style.backgroundColor = '';
-        if (live) live.textContent = '';
       }, 2000);
     }, 1000);
   }

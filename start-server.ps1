@@ -18,6 +18,7 @@ try {
     Write-Host "   • Homepage: http://localhost:8000/index.html" -ForegroundColor Blue
     Write-Host "   • FitShare: http://localhost:8000/fitshare.html" -ForegroundColor Blue  
     Write-Host "   • NeedShare: http://localhost:8000/needshare.html" -ForegroundColor Blue
+    Write-Host "   • SpaceShare: http://localhost:8000/spaceshare.html" -ForegroundColor Blue
     Write-Host "   • Test Hub: http://localhost:8000/test.html" -ForegroundColor Blue
     Write-Host ""
     Write-Host "Press Ctrl+C to stop the server" -ForegroundColor Red
