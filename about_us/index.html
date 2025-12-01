@@ -490,7 +490,7 @@
     }
 }
   </style>
-  <script src="global.js" defer></script>
+    <script src="../js/global.js" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -608,8 +608,9 @@
                 <p>Get insider tips, housing alerts, and student deals.</p>
                 <h4 class="join-now">JOIN NOW</h4>
                 <p>never miss what's happening on ReSwap.</p>
-                <form class="subscribe-form">
-                    <input type="email" placeholder="Your Email *">
+                <form class="subscribe-form" data-subscribe-tags="about-page-nested">
+                    <input type="email" placeholder="Your Email *" required>
+                    <input type="text" name="url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <button type="submit">Subscribe</button>
                 </form>
                 <p class="form-consent">By subscribing you agree to with our <a href="#">Private Policy</a> provide consent to receive updates from our company.</p>

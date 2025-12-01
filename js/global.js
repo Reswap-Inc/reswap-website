@@ -1,5 +1,7 @@
 // ReSwap Global JavaScript - Unified functionality
 
+const SUBSCRIBE_ENDPOINT = 'https://reswap.tmithun.com:443/api/global/v1.2/public/subscribe';
+
 // Theme Management
 class ThemeManager {
   constructor() {
@@ -197,16 +199,31 @@ class FormManager {
     const forms = document.querySelectorAll('.subscribe-form');
     
     forms.forEach(form => {
-      form.addEventListener('submit', (e) => {
+      if (form.dataset.validationBound === 'true') {
+        return;
+      }
+
+      form.dataset.validationBound = 'true';
+      form.setAttribute('novalidate', 'novalidate');
+
+      const emailInput = form.querySelector('input[type="email"]');
+      if (!emailInput) {
+        return;
+      }
+
+      emailInput.addEventListener('input', () => {
+        this.clearError(form, emailInput);
+      });
+
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        const emailInput = form.querySelector('input[type="email"]');
         const email = emailInput.value.trim();
         
         if (this.validateEmail(email)) {
-          this.handleSubscription(email, form);
+          this.clearError(form, emailInput);
+          await this.handleSubscription(email, form);
         } else {
-          this.showError('Please enter a valid email address', form);
+          this.showError('Please enter a valid email address', form, emailInput);
         }
       });
     });
@@ -217,47 +234,99 @@ class FormManager {
     return emailRegex.test(email);
   }
 
-  handleSubscription(email, form) {
-    // Simulate subscription process
+  async handleSubscription(email, form) {
     const button = form.querySelector('button');
-    const originalText = button.textContent;
-    
-    button.textContent = 'Subscribing...';
-    button.disabled = true;
-    
-    setTimeout(() => {
-      button.textContent = 'Subscribed!';
-      button.style.backgroundColor = '#31a050';
-      form.querySelector('input').value = '';
-      
+    const emailInput = form.querySelector('input[type="email"]');
+    const originalText = button ? button.textContent : 'Subscribe';
+    const honeypotInput = form.querySelector('.hp-field');
+
+    if (button) {
+      button.textContent = 'Subscribing...';
+      button.disabled = true;
+    }
+
+    const tags = (form.dataset.subscribeTags || 'website')
+      .split(',')
+      .map(tag => tag.trim())
+      .filter(Boolean);
+
+    const payload = {
+      email,
+      page: window.location.pathname,
+      tags,
+      url: honeypotInput ? honeypotInput.value : '',
+      meta: {
+        referrer: document.referrer || '',
+        location: window.location.href,
+      },
+    };
+
+    try {
+      const response = await fetch(SUBSCRIBE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || data?.status?.error) {
+        throw new Error(data?.status?.message || 'Subscription failed');
+      }
+
+      if (button) {
+        button.textContent = 'Subscribed!';
+        button.style.backgroundColor = '#31a050';
+      }
+      if (emailInput) {
+        emailInput.value = '';
+      }
+    } catch (error) {
+      console.error('Subscription failed', error);
+      this.showError('Unable to subscribe right now. Please try again later.', form);
+    } finally {
       setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-        button.style.backgroundColor = '';
+        if (button) {
+          button.textContent = originalText;
+          button.disabled = false;
+          button.style.backgroundColor = '';
+        }
       }, 2000);
-    }, 1000);
+    }
   }
 
-  showError(message, form) {
+  showError(message, form, input) {
     // Create or update error message
     let errorDiv = form.querySelector('.error-message');
     if (!errorDiv) {
-      errorDiv = document.createElement('div');
+      errorDiv = document.createElement('p');
       errorDiv.className = 'error-message';
-      errorDiv.style.color = '#df3f42';
-      errorDiv.style.fontSize = '14px';
-      errorDiv.style.marginTop = '8px';
+      errorDiv.setAttribute('role', 'alert');
+      errorDiv.setAttribute('aria-live', 'polite');
       form.appendChild(errorDiv);
     }
     
     errorDiv.textContent = message;
-    
-    // Remove error after 3 seconds
-    setTimeout(() => {
-      if (errorDiv.parentNode) {
-        errorDiv.parentNode.removeChild(errorDiv);
-      }
-    }, 3000);
+
+    if (input) {
+      input.classList.add('input-error');
+      input.setAttribute('aria-invalid', 'true');
+      input.focus();
+    }
+  }
+
+  clearError(form, input) {
+    if (input) {
+      input.classList.remove('input-error');
+      input.removeAttribute('aria-invalid');
+    }
+
+    const errorDiv = form.querySelector('.error-message');
+    if (errorDiv) {
+      errorDiv.remove();
+    }
   }
 }
 

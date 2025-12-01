@@ -893,6 +893,7 @@ a.nav-link.active {
   display: flex;
   gap: 12px;
   margin: 16px 0;
+  position: relative;
 }
 
 .subscribe-form input {
@@ -901,6 +902,19 @@ a.nav-link.active {
   border: none;
   border-radius: 6px;
   font-size: 14px;
+}
+
+.subscribe-form .hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+
+.subscribe-form input.input-error {
+  border: 1px solid #df3f42;
+  outline: none;
 }
 
 .subscribe-form button {
@@ -916,6 +930,12 @@ a.nav-link.active {
 
 .subscribe-form button:hover {
   background-color: #f0f0f0;
+}
+
+.subscribe-form .error-message {
+  color: #df3f42;
+  font-size: 13px;
+  margin-top: 4px;
 }
 
 .subscribe-legal {

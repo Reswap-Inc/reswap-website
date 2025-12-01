@@ -359,9 +359,10 @@
                     <p>Get insider tips, housing alerts, and student deals.</p>
                     <h5 class="subscribe-title">JOIN NOW</h5>
                     <p>Never miss what's happening on ReSwap.</p>
-                    <form class="subscribe-form" aria-describedby="subscribe-status">
+                    <form class="subscribe-form" aria-describedby="subscribe-status" data-subscribe-tags="home-footer">
                         <label for="footer-email" class="sr-only">Email address</label>
-                        <input id="footer-email" type="email" placeholder="Your Email *" aria-required="true">
+                        <input id="footer-email" type="email" placeholder="Your Email *" aria-required="true" required>
+                        <input type="text" name="url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <button type="submit" class="btn">Subscribe</button>
                         <div id="subscribe-status" class="sr-only" aria-live="polite"></div>
                     </form>
