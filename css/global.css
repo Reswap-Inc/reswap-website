@@ -101,6 +101,34 @@ button.is-disabled,
   --color-text-primary: #df3f42;
 }
 
+/* TripShare Theme */
+[data-theme="tripshare"] {
+  --color-primary: #9168E5;
+  --color-primary-dark: #6f4cc4;
+  --color-text-primary: #9168E5;
+}
+
+/* TripShare accents */
+[data-theme="tripshare"] .hero-title,
+[data-theme="tripshare"] .section-title,
+[data-theme="tripshare"] .community-nav-title {
+  color: var(--color-primary);
+}
+
+[data-theme="tripshare"] .btn-primary,
+[data-theme="tripshare"] .btn-cta {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+[data-theme="tripshare"] .hero-bg-gradient {
+  background: linear-gradient(135deg, transparent 0%, rgba(145, 104, 229, 0.08) 100%);
+}
+
+[data-theme="tripshare"] .why-choose-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
 /* SpaceShare Theme */
 [data-theme="spaceshare"] {
   --color-primary: #50A6CA;
@@ -2649,6 +2677,29 @@ a.nav-link.active {
 }
 .community-nav-card.rideshare-bg h3,
 .community-nav-card.rideshare-bg p {
+  color: #fff;
+}
+
+/* TripShare promo card background */
+.community-nav-card.tripshare-bg {
+  background: linear-gradient(135deg, #9168E5 0%, #6f4cc4 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-color: #9168E5;
+}
+.community-nav-card.tripshare-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08));
+}
+.community-nav-card.tripshare-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.community-nav-card.tripshare-bg h3,
+.community-nav-card.tripshare-bg p {
   color: #fff;
 }
 
