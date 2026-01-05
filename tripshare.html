@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TripShare - Housing & Subleases | ReSwap</title>
+  <title>TripShare - Carpool & Ride Sharing | ReSwap</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
   <header id="header" class="site-header">
     <div class="container header-container">
       <a href="index.html" class="logo">
-        <div style="position: relative; width: 162px; height: 42px;">
-          <img src="images/reswap_logo_blue.svg" alt="Re" style="position: absolute; top: 9px; left: 0;">
+        <div class="logo-container">
+          <img src="images/reswap_logo_blue.svg" alt="ReSwap">
         </div>
       </a>
       <nav class="main-nav">
@@ -23,14 +23,13 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li class="dropdown">
             <a href="#explore" class="nav-link nav-underline-only dropdown-toggle">Communities
-              <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: brightness(0) saturate(100%) invert(61%) sepia(32%) saturate(707%) hue-rotate(226deg) brightness(91%) contrast(97%);">
+              <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow">
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
               <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
               <a class="dropdown-item" href="spaceshare.html">SpaceShare (Housing)</a>
-              <a class="dropdown-item" href="tripshare.html">TripShare (Travel Housing)</a>
-              <a class="dropdown-item" href="#explore">Carpool (Coming Soon)</a>
+              <a class="dropdown-item" href="tripshare.html">TripShare (Carpool)</a>
             </div>
           </li>
           <li><a href="about_us.html" class="nav-link nav-underline-only">About us</a></li>
@@ -46,20 +45,12 @@
   <main class="main-content">
     <!-- Hero Section -->
     <section class="hero-section">
-      <style>
-        .hero-section {
-          min-height: calc(100vh + 10px);
-          background: url('images/spaceshare_hero.png') center center/cover no-repeat; /* Replace with TripShare hero when available */
-        }
-      </style>
       <div class="container hero-container">
         <div class="hero-content">
           <p class="hero-welcome">Welcome to</p>
           <h1 class="hero-title">TripShare</h1>
           <p class="hero-subtitle">
-            Where students can find and share housing all in one place. 
-Whether you are studying abroad, graduating early, or just need a place for the semester, TripShare makes it easy and stress-free. 
-
+            TripShare helps students heading to the same place connect and share rides. Whether it's an airport run, a weekend trip, or a drive home, split the cost and go together instead of paying full price alone.
           </p>
           <div class="app-buttons">
             <a href="#" class="is-disabled" aria-disabled="true"><img src="images/google_play.png" alt="Get it on Google Play"></a>
@@ -70,28 +61,26 @@ Whether you are studying abroad, graduating early, or just need a place for the 
       <div class="hero-bg-gradient"></div>
     </section>
 
-    <!-- What You Can Share Section -->
-    <section id="what-you-can-share" class="why-choose-section">
+    <!-- What is TripShare Section -->
+    <section id="what-is-tripshare" class="why-choose-section">
       <div class="container">
         <h2 class="section-title">What is TripShare?</h2>
-        <p class="section-subtitle" style="width: calc(80%); max-width: none;">TripShare is your campus housing exchange. 
-Find short-term housing that fits your schedule. Browse verified subleases from students and list your place when you need to move without being stuck in a long-term lease.
-</p>
+        <p class="section-subtitle section-subtitle-wide">TripShare is your campus ride-sharing community. Instead of covering gas or ride costs on your own, join other students traveling the same direction and split the cost.<br>More affordable travel. Real student connections. Built for campus life.</p>
         <div class="features-grid">
           <div class="feature-card">
-            <img src="images/money.svg" alt="Save Costs" class="feature-icon">
-            <h3 class="feature-title">Affordable Flexibility</h3>
-            <p class="feature-description">Save money with semester-friendly stays.</p>
+            <img src="images/money.svg" alt="Save Money" class="feature-icon">
+            <h3 class="feature-title">Save Money on Every Trip</h3>
+            <p class="feature-description">Split gas and travel costs with students already heading your way.</p>
           </div>
           <div class="feature-card">
-            <img src="images/trust_icon.svg" alt="Community Trust" class="feature-icon">
-            <h3 class="feature-title">Student-Verified</h3>
-            <p class="feature-description">Every listing comes from real students in your community.</p>
+            <img src="images/trust_icon.svg" alt="Community Rides" class="feature-icon">
+            <h3 class="feature-title">Community-Powered Rides</h3>
+            <p class="feature-description">Connect with other students and travel together.</p>
           </div>
           <div class="feature-card">
-            <img src="images/lotus_beige.svg" style="width: 90px; height: auto" alt="Flexible Options" class="feature-icon">
-            <h3 class="feature-title">Stress-Free Move</h3>
-            <p class="feature-description">Find or list a space fast.</p>
+            <img src="images/lotus_beige.svg" alt="Student Trust" class="feature-icon feature-icon-large">
+            <h3 class="feature-title">Student-to-Student Trust</h3>
+            <p class="feature-description">Every ride is created by a verified student. Riders are accepted by the ride owner.</p>
           </div>
         </div>
       </div>
@@ -102,25 +91,24 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
       <div class="container">
         <h2 class="section-title">How TripShare Works</h2>
         <div class="how-it-works-grid">
-          <div class="how-it-works-card lendor">
-            <h3>Lender (Sub-Lessor)</h3>
-            <p>List your place when you’re away (study abroad, internship, moving early) and avoid paying for the months you’re not there.</p>
+                    <div class="how-it-works-card lendor">
+            <h3>Ride Creator</h3>
+            <p>Share your ride and lower your travel costs.</p>
             <ul>
-              <li>Post your room or unit with photos and details</li>
-              <li>Set your timeline and rent price</li>
-              <li>Connect with verified students in your campus network</li>
-              <li>Transfer keys and stay protected with in-app messaging</li>
-              <li>Save money and help someone who needs housing</li>
+              <li>Create a ride and set your destination</li>
+              <li>List how many seats are available</li>
+              <li>Review and accept riders who request to join</li>
+              <li>Split the total cost with everyone in the car</li>
             </ul>
           </div>
           <div class="how-it-works-card seller">
-            <h3>Borrower (Sub-Lessee) </h3>
-            <p>Find a place for the semester, summer, or short-term.</p>
+            <h3>Joining a Ride</h3>
+            <p>Get where you're going without paying full price.</p>
             <ul>
-              <li>Browse available subleases near campus</li>
-              <li>Message the host to schedule a walkthrough or pickup</li>
-              <li>Settle in for the months you need</li>
-              <li>Return the space as you found it and leave a rating</li>
+              <li>Browse rides going to your destination</li>
+              <li>Request to join available trips</li>
+              <li>Join the ride once accepted by the driver</li>
+              <li>Split the cost and travel together</li>
             </ul>
           </div>
         </div>
@@ -130,7 +118,7 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
     <!-- Explore Communities Section -->
     <section id="explore" class="community-nav-section">
       <div class="container">
-        <h2 class="community-nav-title" style="font-size: 2.5rem;">Explore Other ReSwap Communities</h2>
+        <h2 class="community-nav-title">Explore Other ReSwap Communities</h2>
         <div class="community-nav-grid">
           <div class="community-nav-card fitshare-bg" onclick="window.location.href='fitshare.html'">
             <h3>FitShare</h3>
@@ -146,7 +134,7 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
           </div>
           <div class="community-nav-card tripshare-bg current" onclick="window.location.href='tripshare.html'">
             <h3>TripShare</h3>
-            <p>Lock in stays for internships, study abroad, and travel terms.</p>
+            <p>Share rides, split costs, and travel together with other students.</p>
           </div>
         </div>
       </div>
@@ -154,17 +142,10 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
 
     <!-- Why it Matters Section -->
     <section id="why-it-matters" class="info-section">  
-      <div class="info-section-background" style="border-top-left-radius: 60px; border-top-right-radius: 60px; background: #9168E5;"></div>
+      <div class="info-section-background"></div>
       <div class="container info-container">
-        <h2 class="info-title" style="font-size: 48px; font-weight: 700; margin-top: 20px; color: white;">Why TripShare Matters</h2>
-        <p class="info-description" style="font-size: 1.1rem; font-weight: 300; margin-bottom: 32px; color: white;">Student housing doesn’t always follow 12-month timelines. TripShare helps students flex, move, travel, and graduate without the financial stress.</p>
-      <p style="font-size: 1.1rem; font-weight: 300">Every sublease listed is:</p>
-            <ul>
-              <li>One less person struggling to find short-term housing</li>
-              <li>One more student avoiding paying double rent</li>
-              <li>A smoother transition for whoever’s coming or going</li>
-            </ul>
-             <p>This is housing made for student schedules, not landlord calendars. </p>
+        <h2 class="info-title">Why TripShare Matters</h2>
+        <p class="info-description">TripShare helps students travel smarter by lowering costs and building community. Every shared ride means fewer solo trips, less stress, and stronger campus connections—all while making transportation more accessible.</p>
     </div>
     </section>
 
@@ -172,8 +153,8 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
     <section id="cta" class="cta-section">
       <img src="images/4868_139.svg" class="cta-blur-bg" alt="">
       <div class="container cta-container">
-        <h2 class="cta-title">Start your TripShare journey today</h2>
-        <a href="#" class="btn btn-cta">Explore Listings</a>
+        <h2 class="cta-title">Share rides. Split costs. Build community with TripShare.</h2>
+        <a href="#" class="btn btn-cta">Join the Community</a>
       </div>
     </section>
   </main>
@@ -222,9 +203,9 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
         </div>
         <div class="footer-col footer-subscribe-col">
           <h4 class="footer-heading">Stay Connected</h4>
-          <p>Get housing updates, safety alerts, and community news.</p>
+          <p>Get ride updates, safety alerts, and community news.</p>
           <h5 class="subscribe-title">JOIN TRIPSHARE</h5>
-          <p>Never miss new listings or subleases.</p>
+          <p>Never miss new rides or travel opportunities.</p>
           <form class="subscribe-form" data-subscribe-tags="tripshare-footer">
             <input type="email" placeholder="Your Email *" required>
             <input type="text" name="url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">

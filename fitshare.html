@@ -18,8 +18,8 @@
     <header id="header" class="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <div style="position: relative; width: 162px; height: 42px;">
-                    <img src="images/ReSwap-Logo-teal.svg" alt="Re" style="position: absolute; top: 9px; left: 0;">
+                <div class="logo-container">
+                    <img src="images/ReSwap-Logo-teal.svg" alt="ReSwap">
                 </div>
             </a>
             <nav class="main-nav">
@@ -27,13 +27,13 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li class="dropdown">
                         <a href="#explore" class="nav-link nav-underline-only dropdown-toggle">Communities
-                            <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(41%) sepia(99%) saturate(355%) hue-rotate(135deg) brightness(0.95);">
+                            <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow">
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
                             <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
                             <a class="dropdown-item" href="spaceshare.html">SpaceShare (Housing)</a>
-                            <a class="dropdown-item" href="#explore">Carpool (Coming Soon)</a>
+                            <a class="dropdown-item" href="tripshare.html">TripShare (Carpool)</a>
                         </div>
                     </li>
                     <!-- <li><a href="about_us.html" class="nav-link">About us M</a></li> -->
@@ -48,7 +48,7 @@
     </header>
 
     <!-- Welcome to FitShare Community Section -->
-    <section id="hero" class="hero-section" style="min-height: calc(100vh + 10px); background: url('images/Fitshare_hero.png') center center/cover no-repeat;">
+    <section id="hero" class="hero-section">
         <div class="container hero-container">
             <div class="hero-content">
                 <p class="hero-welcome">Welcome to</p>
@@ -69,7 +69,7 @@
     <section id="what-you-can-share" class="why-choose-section">
         <div class="container">
             <h2 class="section-title">What is FitShare?</h2>
-            <p class="section-subtitle" style="width: calc(80%); max-width: none;">FitShare is your campus closet on demand. Instead of buying brand new, explore pre‑loved pieces from students who’ve already rocked them and give your old fits a second life.</p>
+            <p class="section-subtitle section-subtitle-wide">FitShare is your campus closet on demand. Instead of buying brand new, explore pre‑loved pieces from students who've already rocked them and give your old fits a second life.</p>
             <div class="features-grid">
                 <div class="feature-card">
                     <img src="images/money.svg" alt="Workout Equipment" class="feature-icon">
@@ -91,10 +91,9 @@
     </section>
 
     <!-- How FitShare Works Section -->
-    <section id="how-it-works" class="how-it-works-section" style="
-    padding-top: 50px;">
+    <section id="how-it-works" class="how-it-works-section">
         <div class="container">
-            <h2 class="section-title" style="font-size: 3rem;">How FitShare Works</h2>
+            <h2 class="section-title">How FitShare Works</h2>
             <div class="how-it-works-grid">
                 <div class="how-it-works-card lendor">
                     <h3>Lender</h3>
@@ -123,7 +122,7 @@
     <!-- Explore Communities Section -->
     <section id="explore" class="community-nav-section">
         <div class="container">
-            <h2 class="community-nav-title" style="font-size: 2.5rem;">Explore Other ReSwap Communities</h2>
+            <h2 class="community-nav-title">Explore Other ReSwap Communities</h2>
             <div class="community-nav-grid">
                 <div class="community-nav-card needshare-bg" onclick="window.location.href='needshare.html'">
                     <h3>NeedShare</h3>
@@ -133,9 +132,9 @@
                     <h3>FitShare</h3>
                     <p>Swap and shop outfits for game day, formals, and beyond.</p>
                 </div>
-                <div class="community-nav-card rideshare-bg">
-                        <h3>RideShare</h3>
-                        <p>Grab safe, affordable rides with fellow students.</p>
+                <div class="community-nav-card tripshare-bg" onclick="window.location.href='tripshare.html'">
+                        <h3>TripShare</h3>
+                        <p>Share rides, split costs, and travel together with other students.</p>
                     </div>
                     <div class="community-nav-card spaceshare-bg" onclick="window.location.href='spaceshare.html'">
                         <h3>SpaceShare</h3>
@@ -147,10 +146,10 @@
 
     <!-- Why it Matters Section -->
     <section id="why-it-matters" class="info-section">
-    <div class="info-section-background" style="border-top-left-radius: 60px; border-top-right-radius: 60px;"></div>
+        <div class="info-section-background"></div>
         <div class="container info-container">
-            <h2 class="info-title" style="font-size: 48px; font-weight: 700; margin-top: 20px;">Why FitShare Matters</h2>
-            <p class="info-description" style="font-size: 1.1rem; font-weight: 300; margin-bottom: 32px;">
+            <h2 class="info-title">Why FitShare Matters</h2>
+            <p class="info-description">
                 FitShare makes fitness more accessible and sustainable. Every piece of equipment you share
                 is one less item sitting unused and one more person empowered to achieve their health goals
                 without breaking the bank.
@@ -207,14 +206,7 @@
                         <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw"><img src="images/insta_icon.png" alt="Social Icon"></a>
                         <a href="#"><img src="images/facebook_icon.png" alt="Social Icon"></a>
                         <a href="https://share.google/CBvmgw6fDsq2qk2IF"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
-                        <!-- <a href="#"><img src="images/4737_23573.svg" alt="Social Icon"></a> -->
                     </div>
-                    <style>
-                        .footer-logo-icon,
-                        .footer-social-col img {
-                            filter: brightness(0) saturate(100%) invert(92%) sepia(10%) saturate(400%) hue-rotate(20deg) brightness(1.1);
-                        }
-                    </style>
                 </div>
                 <div class="footer-col footer-subscribe-col">
                     <h4 class="footer-heading">Stay in the Loop</h4>

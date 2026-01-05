@@ -14,8 +14,8 @@
   <header id="header" class="site-header">
     <div class="container header-container">
       <a href="index.html" class="logo">
-        <div style="position: relative; width: 162px; height: 42px;">
-          <img src="images/reswap_logo_blue.svg" alt="Re" style="position: absolute; top: 9px; left: 0;">
+        <div class="logo-container">
+          <img src="images/reswap_logo_blue.svg" alt="ReSwap">
         </div>
       </a>
       <nav class="main-nav">
@@ -23,13 +23,13 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li class="dropdown">
             <a href="#explore" class="nav-link nav-underline-only dropdown-toggle">Communities
-              <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow" style="filter: invert(60%) sepia(29%) saturate(700%) hue-rotate(170deg) brightness(0.9);">
+              <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow">
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
               <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
               <a class="dropdown-item" href="spaceshare.html">SpaceShare (Housing)</a>
-              <a class="dropdown-item" href="#explore">Carpool (Coming Soon)</a>
+              <a class="dropdown-item" href="tripshare.html">TripShare (Carpool)</a>
             </div>
           </li>
           <li><a href="about_us.html" class="nav-link nav-underline-only">About us</a></li>
@@ -45,12 +45,6 @@
   <main class="main-content">
     <!-- Hero Section -->
     <section class="hero-section">
-      <style>
-        .hero-section {
-          min-height: calc(100vh + 10px);
-          background: url('images/spaceshare_hero.png') center center/cover no-repeat; /* Replace with SpaceShare hero */
-        }
-      </style>
       <div class="container hero-container">
         <div class="hero-content">
           <p class="hero-welcome">Welcome to</p>
@@ -73,7 +67,7 @@ Whether you are studying abroad, graduating early, or just need a place for the 
     <section id="what-you-can-share" class="why-choose-section">
       <div class="container">
         <h2 class="section-title">What is SpaceShare?</h2>
-        <p class="section-subtitle" style="width: calc(80%); max-width: none;">SpaceShare is your campus housing exchange. 
+        <p class="section-subtitle section-subtitle-wide">SpaceShare is your campus housing exchange. 
 Find short-term housing that fits your schedule. Browse verified subleases from students and list your place when you need to move without being stuck in a long-term lease.
 </p>
         <div class="features-grid">
@@ -88,7 +82,7 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
             <p class="feature-description">Every listing comes from real students in your community.</p>
           </div>
           <div class="feature-card">
-            <img src="images/lotus_beige.svg" style="width: 90px; height: auto" alt="Flexible Options" class="feature-icon">
+            <img src="images/lotus_beige.svg" alt="Flexible Options" class="feature-icon feature-icon-large">
             <h3 class="feature-title">Stress-Free Move</h3>
             <p class="feature-description">Find or list a space fast.</p>
           </div>
@@ -129,7 +123,7 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
     <!-- Explore Communities Section -->
     <section id="explore" class="community-nav-section">
       <div class="container">
-        <h2 class="community-nav-title" style="font-size: 2.5rem;">Explore Other ReSwap Communities</h2>
+        <h2 class="community-nav-title">Explore Other ReSwap Communities</h2>
         <div class="community-nav-grid">
           <div class="community-nav-card fitshare-bg" onclick="window.location.href='fitshare.html'">
             <h3>FitShare</h3>
@@ -143,9 +137,9 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
             <h3>SpaceShare</h3>
             <p>Find subleases and room swaps without the stress.</p>
           </div>
-          <div class="community-nav-card rideshare-bg">
-            <h3>RideShare</h3>
-            <p>Grab safe, affordable rides with fellow students.</p>
+          <div class="community-nav-card tripshare-bg" onclick="window.location.href='tripshare.html'">
+            <h3>TripShare</h3>
+            <p>Share rides, split costs, and travel together with other students.</p>
           </div>
         </div>
       </div>
@@ -153,11 +147,11 @@ Find short-term housing that fits your schedule. Browse verified subleases from 
 
     <!-- Why it Matters Section -->
     <section id="why-it-matters" class="info-section">  
-      <div class="info-section-background" style="border-top-left-radius: 60px; border-top-right-radius: 60px; background: #50A6CA;"></div>
+      <div class="info-section-background"></div>
       <div class="container info-container">
-        <h2 class="info-title" style="font-size: 48px; font-weight: 700; margin-top: 20px; color: white;">Why SpaceShare Matters</h2>
-        <p class="info-description" style="font-size: 1.1rem; font-weight: 300; margin-bottom: 32px; color: white;">Student housing doesn’t always follow 12-month timelines. SpaceShare helps students flex, move, travel, and graduate without the financial stress.</p>
-      <p style="font-size: 1.1rem; font-weight: 300">Every sublease listed is:</p>
+        <h2 class="info-title">Why SpaceShare Matters</h2>
+        <p class="info-description">Student housing doesn't always follow 12-month timelines. SpaceShare helps students flex, move, travel, and graduate without the financial stress.</p>
+      <p class="info-section-text">Every sublease listed is:</p>
             <ul>
               <li>One less person struggling to find short-term housing</li>
               <li>One more student avoiding paying double rent</li>

@@ -25,6 +25,8 @@ class ThemeManager {
       this.setTheme('needshare');
     } else if (path.includes('spaceshare') || page === 'spaceshare') {
       this.setTheme('spaceshare');
+    } else if (path.includes('tripshare') || page === 'tripshare') {
+      this.setTheme('tripshare');
     } else {
       this.setTheme('default');
     }
@@ -50,6 +52,8 @@ class ThemeManager {
         link.classList.add('active');
       } else if (this.currentTheme === 'spaceshare' && link.textContent.includes('SpaceShare')) {
         link.classList.add('active');
+      } else if (this.currentTheme === 'tripshare' && link.textContent.includes('TripShare')) {
+        link.classList.add('active');
       } else if (this.currentTheme === 'default' && link.textContent.includes('Home')) {
         link.classList.add('active');
       }
@@ -67,6 +71,8 @@ class ThemeManager {
           this.setTheme('needshare');
         } else if (text.includes('SpaceShare')) {
           this.setTheme('spaceshare');
+        } else if (text.includes('TripShare')) {
+          this.setTheme('tripshare');
         } else if (text.includes('Home')) {
           this.setTheme('default');
         }

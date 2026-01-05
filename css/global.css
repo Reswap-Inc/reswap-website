@@ -87,28 +87,93 @@ button.is-disabled,
   cursor: not-allowed;
 }
 
-/* FitShare Theme */
-[data-theme="fitshare"] {
+/* ===========================================
+   COMMUNITY THEME SYSTEM
+   Each community has its own color scheme.
+   The data-theme attribute on <html> activates the theme.
+   =========================================== */
+
+/* FitShare Theme - Teal */
+html[data-theme="fitshare"] {
   --color-primary: #008a73;
   --color-primary-dark: #006d5a;
   --color-text-primary: #008a73;
 }
 
-/* NeedShare Theme */
-[data-theme="needshare"] {
+[data-theme="fitshare"] .hero-title,
+[data-theme="fitshare"] .section-title,
+[data-theme="fitshare"] .community-nav-title {
+  color: var(--color-primary);
+}
+
+[data-theme="fitshare"] .btn-primary,
+[data-theme="fitshare"] .btn-cta {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+[data-theme="fitshare"] .btn-primary:hover,
+[data-theme="fitshare"] .btn-cta:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+[data-theme="fitshare"] .hero-bg-gradient {
+  background: linear-gradient(135deg, transparent 0%, rgba(0, 138, 115, 0.08) 100%);
+}
+
+[data-theme="fitshare"] .why-choose-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%);
+}
+
+[data-theme="fitshare"] .info-section-background {
+  background-color: var(--color-primary);
+}
+
+/* NeedShare Theme - Red/Coral */
+html[data-theme="needshare"] {
   --color-primary: #df3f42;
   --color-primary-dark: #c73134;
   --color-text-primary: #df3f42;
 }
 
-/* TripShare Theme */
-[data-theme="tripshare"] {
+[data-theme="needshare"] .hero-title,
+[data-theme="needshare"] .section-title,
+[data-theme="needshare"] .community-nav-title {
+  color: var(--color-primary);
+}
+
+[data-theme="needshare"] .btn-primary,
+[data-theme="needshare"] .btn-cta {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+[data-theme="needshare"] .btn-primary:hover,
+[data-theme="needshare"] .btn-cta:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+[data-theme="needshare"] .hero-bg-gradient {
+  background: linear-gradient(135deg, transparent 0%, rgba(223, 63, 66, 0.08) 100%);
+}
+
+[data-theme="needshare"] .why-choose-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%);
+}
+
+[data-theme="needshare"] .info-section-background {
+  background-color: var(--color-primary);
+}
+
+/* TripShare Theme - Purple */
+html[data-theme="tripshare"] {
   --color-primary: #9168E5;
-  --color-primary-dark: #6f4cc4;
+  --color-primary-dark: #6B46C1;
   --color-text-primary: #9168E5;
 }
 
-/* TripShare accents */
 [data-theme="tripshare"] .hero-title,
 [data-theme="tripshare"] .section-title,
 [data-theme="tripshare"] .community-nav-title {
@@ -121,22 +186,31 @@ button.is-disabled,
   border-color: var(--color-primary);
 }
 
+[data-theme="tripshare"] .btn-primary:hover,
+[data-theme="tripshare"] .btn-cta:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
 [data-theme="tripshare"] .hero-bg-gradient {
   background: linear-gradient(135deg, transparent 0%, rgba(145, 104, 229, 0.08) 100%);
 }
 
 [data-theme="tripshare"] .why-choose-section {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%);
 }
 
-/* SpaceShare Theme */
-[data-theme="spaceshare"] {
+[data-theme="tripshare"] .info-section-background {
+  background-color: var(--color-primary);
+}
+
+/* SpaceShare Theme - Blue */
+html[data-theme="spaceshare"] {
   --color-primary: #50A6CA;
   --color-primary-dark: #3e86a3;
   --color-text-primary: #50A6CA;
 }
 
-/* SpaceShare accents: ensure key elements use theme blue */
 [data-theme="spaceshare"] .hero-title,
 [data-theme="spaceshare"] .section-title,
 [data-theme="spaceshare"] .community-nav-title {
@@ -149,11 +223,75 @@ button.is-disabled,
   border-color: var(--color-primary);
 }
 
-/* SpaceShare Theme */
-[data-theme="spaceshare"] {
-  --color-primary: #50A6CA;
-  --color-primary-dark: #3e86a3;
-  --color-text-primary: #50A6CA;
+[data-theme="spaceshare"] .btn-primary:hover,
+[data-theme="spaceshare"] .btn-cta:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+[data-theme="spaceshare"] .hero-bg-gradient {
+  background: linear-gradient(135deg, transparent 0%, rgba(80, 166, 202, 0.08) 100%);
+}
+
+[data-theme="spaceshare"] .why-choose-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2b8a5c 100%);
+}
+
+[data-theme="spaceshare"] .info-section-background {
+  background-color: var(--color-primary);
+}
+
+/* Theme-specific dropdown arrow colors */
+[data-theme="fitshare"] .dropdown-arrow {
+  filter: invert(41%) sepia(99%) saturate(355%) hue-rotate(135deg) brightness(0.95);
+}
+
+[data-theme="needshare"] .dropdown-arrow {
+  filter: invert(54%) sepia(99%) saturate(1000%) hue-rotate(-10deg) brightness(1.1);
+}
+
+[data-theme="tripshare"] .dropdown-arrow {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(32%) saturate(707%) hue-rotate(226deg) brightness(91%) contrast(97%);
+}
+
+[data-theme="spaceshare"] .dropdown-arrow {
+  filter: invert(60%) sepia(29%) saturate(700%) hue-rotate(170deg) brightness(0.9);
+}
+
+/* Info section text styling */
+.info-section-text {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* Feature icon large variant */
+.feature-icon-large {
+  width: 90px;
+  height: auto;
+}
+
+/* ===========================================
+   COMMUNITY-SPECIFIC HERO BACKGROUNDS
+   =========================================== */
+
+[data-theme="fitshare"] .hero-section {
+  min-height: calc(100vh + 10px);
+  background: url('../images/Fitshare_hero.png') center center/cover no-repeat;
+}
+
+[data-theme="needshare"] .hero-section {
+  min-height: calc(100vh + 10px);
+  background: url('../images/needshare hero.png') center center/cover no-repeat;
+}
+
+[data-theme="tripshare"] .hero-section {
+  min-height: calc(100vh + 10px);
+  background: url('../images/Tripshare_hero_image.png') center center/cover no-repeat;
+}
+
+[data-theme="spaceshare"] .hero-section {
+  min-height: calc(100vh + 10px);
+  background: url('../images/spaceshare_hero.png') center center/cover no-repeat;
 }
 
 /* Reset and Base Styles */
@@ -331,8 +469,17 @@ a {
   display: block;
 }
 
-.logo img {
+.logo-container {
+  position: relative;
+  width: 162px;
+  height: 42px;
+}
+
+.logo img,
+.logo-container img {
   position: absolute;
+  top: 9px;
+  left: 0;
 }
 
 .logo-icon {
@@ -2516,18 +2663,20 @@ a.nav-link.active {
 .info-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.29;
   color: var(--color-text-light);
+  margin-top: 20px;
   margin-bottom: 17px;
 }
 
 .info-description {
   font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 26px;
+  font-weight: 300;
+  font-size: 1.1rem;
   line-height: 1.33;
   color: var(--color-text-light);
+  margin-bottom: 32px;
 }
 
 /* Community navigation cards */
@@ -2549,11 +2698,17 @@ a.nav-link.active {
 }
 
 .community-nav-title {
-  font-size: 64px;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   color: var(--color-primary);
   margin-bottom: 27px;
+}
+
+/* Wider section subtitle variant for community pages */
+.section-subtitle-wide {
+  width: 80%;
+  max-width: none;
 }
 
 .community-nav-grid {
@@ -2682,7 +2837,7 @@ a.nav-link.active {
 
 /* TripShare promo card background */
 .community-nav-card.tripshare-bg {
-  background: linear-gradient(135deg, #9168E5 0%, #6f4cc4 100%);
+  background: url('../images/car_driving.png') center center/cover no-repeat;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -2692,7 +2847,7 @@ a.nav-link.active {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08));
+  background: rgba(0,0,0,0.25);
 }
 .community-nav-card.tripshare-bg > * {
   position: relative;
