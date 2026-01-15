@@ -693,6 +693,11 @@ a.nav-link.active {
   justify-content: left;
 }
 
+/* Scroll offset for fixed header when navigating to #download */
+#download {
+  scroll-margin-top: 120px;
+}
+
 .app-buttons img {
   height: 40px;
   width: auto;
