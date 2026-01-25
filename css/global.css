@@ -294,6 +294,16 @@ html[data-theme="spaceshare"] {
   background: url('../images/spaceshare_hero.png') center center/cover no-repeat;
 }
 
+/* ===========================================
+   MOBILE HERO BACKGROUND (all pages)
+   Applies when screen width is less than 646px
+   =========================================== */
+@media (max-width: 645px) {
+  .hero-section {
+    background: url('../images/reswap_mobile_hero.png') center center/cover no-repeat !important;
+  }
+}
+
 /* Reset and Base Styles */
 * {
   box-sizing: border-box;
