@@ -3665,3 +3665,155 @@ a.nav-link.active {
     font-size: 12px;
   }
 }
+
+/* ===========================================
+   DELETE MY DATA PAGE STYLES
+   =========================================== */
+
+.delete-data-section {
+  min-height: calc(100vh - 200px);
+}
+
+.delete-data-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px 80px;
+}
+
+.delete-data-title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.delete-data-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.delete-data-steps {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.delete-data-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.delete-data-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.delete-data-step:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.delete-data-step-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #2E8B57;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 20px;
+}
+
+.delete-data-step-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
+
+.delete-data-step-content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.delete-data-warning {
+  margin-top: 40px;
+  padding: 24px;
+  background: #fff8e6;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+}
+
+.delete-data-warning h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #92400e;
+  margin: 0 0 8px;
+}
+
+.delete-data-warning p {
+  color: #78350f;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.delete-data-contact {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.delete-data-contact p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.delete-data-contact a {
+  color: #2E8B57;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.delete-data-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Delete Data Page Responsive */
+@media (max-width: 768px) {
+  .delete-data-container {
+    padding: 100px 16px 60px;
+  }
+
+  .delete-data-title {
+    font-size: 2rem;
+  }
+
+  .delete-data-steps {
+    padding: 24px;
+  }
+
+  .delete-data-step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    margin-right: 16px;
+  }
+
+  .delete-data-step-content h3 {
+    font-size: 1.1rem;
+  }
+}
