@@ -79,11 +79,6 @@ class ThemeManager {
       }
     });
   }
-
-  updateFooterYear() {
-    const currentYear = new Date().getFullYear();
-    document.getElementById('current-year').textContent = currentYear;
-  } 
 }
 
 // FAQ Functionality
