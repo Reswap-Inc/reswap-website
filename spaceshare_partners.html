@@ -1,283 +1,192 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="spaceshare">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Housing Partners | SpaceShare - ReSwap</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/global.css">
-  <script src="js/global.js" defer></script>
-</head>
-<body>
-  <header id="header" class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <div class="logo-container">
-          <img src="images/reswap_logo_blue.svg" alt="ReSwap">
-        </div>
-      </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li class="dropdown">
-            <a href="#explore" class="nav-link nav-underline-only dropdown-toggle">Communities
-              <img src="images/I4917_78_4917_67.svg" alt="dropdown arrow" class="dropdown-arrow">
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="fitshare.html">FitShare (Clothing)</a>
-              <a class="dropdown-item" href="needshare.html">NeedShare (Essentials)</a>
-              <a class="dropdown-item" href="spaceshare.html">SpaceShare (Housing)</a>
-              <a class="dropdown-item" href="tripshare.html">TripShare (Carpool)</a>
-            </div>
-          </li>
-          <li><a href="about_us.html" class="nav-link nav-underline-only">About us</a></li>
-        </ul>
-      </nav>
-      <div class="header-buttons">
-        <a href="https://usc.reswap.org/web/admin/home" class="btn btn-admin">Admin Login</a>
-        <a href="spaceshare.html#download" class="btn btn-primary btn-download">Download App</a>
-      </div>
-    </div>
-  </header>
+<html lang="en"><head></head><body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-sans transition-colors duration-300 min-h-screen flex flex-col">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SpaceShare - Partner With Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#34a853", // Green from the reference
+              "primary-dark": "#2d8a45",
+              "secondary": "#8ab4f8", // Light blue accent
+              "background-light": "#f4f3ec", // Beige from reference
+              "background-dark": "#1a1a1a",
+              "card-light": "#ffffff",
+              "card-dark": "#262626",
+              "text-main-light": "#333333",
+              "text-main-dark": "#e5e5e5",
+              "text-muted-light": "#666666",
+              "text-muted-dark": "#a3a3a3",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              'xl': '1rem',
+              '2xl': '1.5rem',
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .calendar-day.selected {
+            background-color: #34a853;
+            color: white;
+        }
+        .calendar-day:hover:not(.selected):not(.disabled) {
+            background-color: #e6f4ea;
+        }
+        .dark .calendar-day:hover:not(.selected):not(.disabled) {
+            background-color: #2d3748;
+        }
+    </style>
 
-  <main class="main-content">
-    <!-- Partners Hero Section -->
-    <section class="partners-hero-section">
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="spaceshare.html">SpaceShare</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Housing Partners</span>
-        </nav>
-        <h1 class="partners-hero-title">Our Housing Partners</h1>
-        <p class="partners-hero-subtitle">SpaceShare collaborates with trusted housing providers to bring verified, student-friendly listings to our community. Meet the partners making campus living easier.</p>
-      </div>
-    </section>
 
-    <!-- Partners Grid Section -->
-    <section id="partners-grid" class="partners-grid-section">
-      <div class="container">
-        <h2 class="section-title">Featured Partners</h2>
-        <p class="section-subtitle">These organizations have partnered with SpaceShare to provide quality housing options for students.</p>
+<nav class="w-full px-6 py-4 flex items-center justify-between bg-transparent relative z-20">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-display font-bold text-primary tracking-tight" href="#">SpaceShare</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-text-muted-light dark:text-text-muted-dark">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">Communities <span class="material-icons-round text-sm">expand_more</span></a>
+<a class="hover:text-primary transition-colors" href="#">About us</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-sm font-medium hover:text-primary transition-colors hidden sm:block" href="#">Admin Login</a>
+<button class="bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:bg-blue-400 transition-colors">Download App</button>
+</div>
+</nav>
+<main class="flex-grow flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-12">
+<div class="space-y-6">
+<span class="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-primary dark:text-green-300 text-xs font-bold uppercase tracking-wider">Housing Partners</span>
+<h1 class="text-5xl md:text-6xl font-display font-bold leading-tight text-text-main-light dark:text-white">
+                        Fill vacancies with verified <span class="text-primary italic">student tenants</span>.
+                    </h1>
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed max-w-lg">
+                        Streamline your leasing process by connecting directly with university networks. We vet students so you can build long-term, reliable partnerships without the headache.
+                    </p>
+</div>
+<div class="space-y-8">
+<h3 class="text-xl font-display font-semibold border-b border-gray-200 dark:border-gray-700 pb-2 inline-block">How Partnership Works</h3>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
+<div>
+<h4 class="font-bold text-lg">List Your Portfolio</h4>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-1">Sync your availability directly or upload properties in bulk via our partner dashboard.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">2</div>
+<div>
+<h4 class="font-bold text-lg">Receive Verified Matches</h4>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-1">Our algorithm matches you with students who meet your criteria and have verified enrollment status.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">3</div>
+<div>
+<h4 class="font-bold text-lg">Streamlined Agreements</h4>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-1">Digital signing, deposit collection, and communication all happen securely within SpaceShare.</p>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest font-semibold mb-4">Trusted by housing leaders</p>
+<div class="flex gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="h-8 flex items-center font-display font-bold text-xl dark:text-white">Aspen<span class="text-primary">Heights</span></div>
+<div class="h-8 flex items-center font-sans font-black text-xl tracking-tighter dark:text-white">LND<span class="font-light">MARK</span></div>
+<div class="h-8 flex items-center font-serif italic text-xl dark:text-white">Campus<span class="not-italic font-bold">Life</span></div>
+<div class="h-8 flex items-center font-display font-bold text-xl text-secondary">The<span class="text-primary ml-1">Villas</span></div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl dark:bg-primary/10 pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl dark:bg-secondary/10 pointer-events-none"></div>
+<div class="bg-card-light dark:bg-card-dark rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden relative z-10">
+<div class="p-6 md:p-8">
+<h3 class="text-2xl font-display font-bold mb-2">Schedule a Consultation</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm mb-6">Talk to our partnership team to see how SpaceShare can increase your occupancy rates.</p>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-semibold text-sm">March 2026</h4>
+<div class="flex gap-2">
+<button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"><span class="material-icons-round text-sm">chevron_left</span></button>
+<button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"><span class="material-icons-round text-sm">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 text-center text-xs text-text-muted-light dark:text-text-muted-dark mb-2">
+<span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm">
+<span class="p-2"></span><span class="p-2"></span>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed text-gray-400" disabled="">1</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed text-gray-400" disabled="">2</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">3</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">4</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">5</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">6</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">7</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">8</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">9</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">10</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">11</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 selected shadow-md">12</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">13</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">14</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">15</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">16</button>
+<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">17</button>
+</div>
+</div>
+<div class="flex-1 border-l border-gray-100 dark:border-gray-700 pl-0 md:pl-6 mt-6 md:mt-0">
+<h4 class="font-semibold text-sm mb-4">Thursday, Oct 12</h4>
+<div class="space-y-2 max-h-[220px] overflow-y-auto pr-1 custom-scrollbar">
+<button class="w-full py-2 px-4 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">09:00 AM</button>
+<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">09:30 AM</button>
+<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">10:00 AM</button>
+<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">11:30 AM</button>
+<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">01:00 PM</button>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+<form class="space-y-4">
+<div>
+<label class="block text-xs font-medium text-text-muted-light dark:text-text-muted-dark mb-1">Company Email</label>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-sm focus:ring-primary focus:border-primary" placeholder="name@company.com" type="email"/>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 rounded-lg shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-0.5" type="button">
+                                    Confirm Booking
+                                </button>
+</form>
+</div>
+<div class="mt-4 flex items-center justify-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark">
+<span class="material-icons-round text-sm">lock</span> Secure scheduling powered by SpaceShare
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full py-8 text-center text-xs text-text-muted-light dark:text-text-muted-dark border-t border-gray-200 dark:border-gray-800 mt-12">
+<div class="flex justify-center gap-6 mb-4">
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Partner Support</a>
+</div>
+<p>&copy; <span id= "current-year"></span> ReSwap Inc. All rights reserved.</p>
+</footer>
 
-        <div class="partners-grid">
-          <!-- Partner Card 1 -->
-          <div class="partner-card">
-            <div class="partner-card-logo">
-              <img src="images/partners/partner_placeholder_1.png" alt="University Housing">
-            </div>
-            <div class="partner-card-content">
-              <h3 class="partner-card-title">University Housing</h3>
-              <p class="partner-card-type">On-Campus Housing</p>
-              <p class="partner-card-description">Official university housing services providing on-campus living options for undergraduate and graduate students.</p>
-              <ul class="partner-card-features">
-                <li>Fully furnished units</li>
-                <li>Meal plan options</li>
-                <li>24/7 security</li>
-              </ul>
-              <a href="#" class="btn btn-primary partner-card-btn">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Partner Card 2 -->
-          <div class="partner-card">
-            <div class="partner-card-logo">
-              <img src="images/partners/partner_placeholder_1.png" alt="Campus Living">
-            </div>
-            <div class="partner-card-content">
-              <h3 class="partner-card-title">Campus Living</h3>
-              <p class="partner-card-type">Student Apartments</p>
-              <p class="partner-card-description">Modern apartment living designed specifically for college students with convenient campus access.</p>
-              <ul class="partner-card-features">
-                <li>Private bedrooms</li>
-                <li>In-unit laundry</li>
-                <li>Study lounges</li>
-              </ul>
-              <a href="#" class="btn btn-primary partner-card-btn">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Partner Card 3 -->
-          <div class="partner-card">
-            <div class="partner-card-logo">
-              <img src="images/partners/partner_placeholder_1.png" alt="Student Residences">
-            </div>
-            <div class="partner-card-content">
-              <h3 class="partner-card-title">Student Residences</h3>
-              <p class="partner-card-type">Shared Housing</p>
-              <p class="partner-card-description">Affordable shared housing options connecting students looking for roommates in the campus area.</p>
-              <ul class="partner-card-features">
-                <li>Roommate matching</li>
-                <li>Flexible leases</li>
-                <li>Utilities included</li>
-              </ul>
-              <a href="#" class="btn btn-primary partner-card-btn">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Partner Card 4 -->
-          <div class="partner-card">
-            <div class="partner-card-logo">
-              <img src="images/partners/partner_placeholder_1.png" alt="Trojan Housing">
-            </div>
-            <div class="partner-card-content">
-              <h3 class="partner-card-title">Trojan Housing</h3>
-              <p class="partner-card-type">Premium Living</p>
-              <p class="partner-card-description">Upscale student housing with premium amenities and a focus on academic success and community.</p>
-              <ul class="partner-card-features">
-                <li>Fitness center</li>
-                <li>Rooftop lounges</li>
-                <li>Academic support</li>
-              </ul>
-              <a href="#" class="btn btn-primary partner-card-btn">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Partner Card 5 -->
-          <div class="partner-card">
-            <div class="partner-card-logo">
-              <img src="images/partners/partner_placeholder_5.svg" alt="Off-Campus Living">
-            </div>
-            <div class="partner-card-content">
-              <h3 class="partner-card-title">Off-Campus Living</h3>
-              <p class="partner-card-type">Neighborhood Housing</p>
-              <p class="partner-card-description">Curated off-campus housing options in safe, student-friendly neighborhoods near campus.</p>
-              <ul class="partner-card-features">
-                <li>Pet-friendly options</li>
-                <li>Parking available</li>
-                <li>Close to transit</li>
-              </ul>
-              <a href="#" class="btn btn-primary partner-card-btn">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Partner Card 6 -->
-          <div class="partner-card">
-            <div class="partner-card-logo">
-              <img src="images/partners/partner_placeholder_6.svg" alt="Student Suites">
-            </div>
-            <div class="partner-card-content">
-              <h3 class="partner-card-title">Student Suites</h3>
-              <p class="partner-card-type">Short-Term Housing</p>
-              <p class="partner-card-description">Flexible short-term housing perfect for summer programs, internships, and semester subleases.</p>
-              <ul class="partner-card-features">
-                <li>Month-to-month leases</li>
-                <li>Fully furnished</li>
-                <li>No long-term commitment</li>
-              </ul>
-              <a href="#" class="btn btn-primary partner-card-btn">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Become a Partner Section -->
-    <section id="become-partner" class="become-partner-section">
-      <div class="container">
-        <div class="become-partner-content">
-          <h2 class="section-title">Become a Housing Partner</h2>
-          <p class="become-partner-description">Are you a housing provider looking to reach USC students? Partner with SpaceShare to list your properties and connect with our student community.</p>
-          <div class="become-partner-benefits">
-            <div class="benefit-item">
-              <img src="images/trust_icon.svg" alt="Verified Students" class="benefit-icon">
-              <h4>Verified Students</h4>
-              <p>All SpaceShare users are verified USC students</p>
-            </div>
-            <div class="benefit-item">
-              <img src="images/money.svg" alt="Free Listings" class="benefit-icon">
-              <h4>Direct Connection</h4>
-              <p>Connect directly with students seeking housing</p>
-            </div>
-            <div class="benefit-item">
-              <img src="images/lotus_beige.svg" alt="Easy Process" class="benefit-icon">
-              <h4>Simple Process</h4>
-              <p>Easy onboarding and listing management</p>
-            </div>
-          </div>
-          <a href="mailto:partners@reswap.org" class="btn btn-secondary become-partner-btn">Contact Us to Partner</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Back to SpaceShare CTA -->
-    <section id="cta" class="cta-section">
-      <img src="images/4868_139.svg" class="cta-blur-bg" alt="">
-      <div class="container cta-container">
-        <h2 class="cta-title">Ready to find your next space?</h2>
-        <a href="spaceshare.html" class="btn btn-cta">Explore SpaceShare</a>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="site-footer">
-    <div class="footer-bg-gradient"></div>
-    <div class="footer-main">
-      <div class="container footer-grid">
-        <div class="footer-col footer-logo-col">
-          <a href="index.html" class="footer-logo">
-            <img src="images/4737_23538.svg" alt="ReSwap logo icon" class="footer-logo-icon">
-            <span class="footer-logo-text">ReSwap</span>
-          </a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Explore</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#section-communities">Communities</a></li>
-            <li><a href="index.html#footer">About Us</a></li>
-            <li><a href="index.html#faq">FAQs</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Support</h4>
-          <ul class="footer-links">
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Report a Listing</a></li>
-            <li><a href="#">Safety Tips</a></li>
-            <li><a href="#">Help Center</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Legal</h4>
-          <ul class="footer-links">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a></li>
-            <li><a href="#">Campus Guidelines</a></li>
-          </ul>
-        </div>
-        <div class="footer-col footer-social-col">
-          <div class="social-icons">
-            <a href="https://www.instagram.com/reswap.us?utm_source=ig_web_button_share_sheet&igsh=azNkbXkweXVwbzJw"><img src="images/insta_icon.png" alt="Social Icon"></a>
-            <a href="#"><img src="images/facebook_icon.png" alt="Social Icon"></a>
-            <a href="https://share.google/CBvmgw6fDsq2qk2IF"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
-          </div>
-        </div>
-        <div class="footer-col footer-subscribe-col">
-          <h4 class="footer-heading">Stay Connected</h4>
-          <p>Get housing updates, safety alerts, and community news.</p>
-          <h5 class="subscribe-title">JOIN SPACESHARE</h5>
-          <p>Never miss new listings or subleases.</p>
-          <form class="subscribe-form" data-subscribe-tags="spaceshare-partners-footer">
-            <input type="email" placeholder="Your Email *" required>
-            <input type="text" name="url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="subscribe-legal">By subscribing you agree to our <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a> & provide consent to receive updates from SpaceShare.</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-container">
-        <div class="footer-legal-links">
-          <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a>
-          <a href="https://reswap.tmithun.com:443/api/general/v1.2/files/pages/TermsAndCondition.html">Terms of Service</a>
-        </div>
-        <div class="footer-copyright">© ReSwap 2025</div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+</body></html>

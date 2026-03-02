@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/global.css">
   <script src="js/global.js" defer></script>
@@ -153,31 +154,130 @@
       </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works-section">
+    <!-- How It Works Section V2 -->
+    <section id="how-it-works" class="how-it-works-section-v2">
       <div class="container">
-        <h2 class="section-title">How SpaceShare Works</h2>
-        <div class="how-it-works-grid">
-          <div class="how-it-works-card lendor">
-            <h3>Lender (Sub-Lessor)</h3>
-            <p>List your place when you’re away (study abroad, internship, moving early) and avoid paying for the months you’re not there.</p>
-            <ul>
-              <li>Post your room or unit with photos and details</li>
-              <li>Set your timeline and rent price</li>
-              <li>Connect with verified students in your campus network</li>
-              <li>Transfer keys and stay protected with in-app messaging</li>
-              <li>Save money and help someone who needs housing</li>
-            </ul>
+        <!-- Header -->
+        <div class="how-it-works-header">
+          <h2 class="section-title">How SpaceShare Works</h2>
+          <p class="section-subtitle">Connecting students who need space with those who have it, and partnering with housing providers to make subleasing seamless.</p>
+        </div>
+
+        <!-- Lender Section (Blue) -->
+        <div class="how-it-works-row">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-blue"></div>
+            <div class="how-it-works-card card-blue">
+              <div class="card-icon-wrapper">
+                <span class="material-icons-round card-icon">upload_file</span>
+              </div>
+              <div class="card-badge badge-blue">
+                <span>FOR STUDENTS</span>
+              </div>
+              <div class="card-gradient gradient-blue"></div>
+            </div>
           </div>
-          <div class="how-it-works-card seller">
-            <h3>Borrower (Sub-Lessee) </h3>
-            <p>Find a place for the semester, summer, or short-term.</p>
-            <ul>
-              <li>Browse available subleases near campus</li>
-              <li>Message the host to schedule a walkthrough or pickup</li>
-              <li>Settle in for the months you need</li>
-              <li>Return the space as you found it and leave a rating</li>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-blue-light">FOR STUDENTS</div>
+            <h3 class="content-title">Lender (Sub-Lessor)</h3>
+            <p class="content-description">Heading home for the summer or studying abroad? Don't let your room sit empty and burn a hole in your pocket. List your space securely on SpaceShare.</p>
+            <ul class="content-list list-blue">
+              <li>Post your room or unit with detailed photos and amenities</li>
+              <li>Connect with verified students within your campus network</li>
+              <li>Securely transfer keys and handle agreements in-app</li>
             </ul>
+            <a href="#download" class="content-link link-blue">Start Listing →</a>
+          </div>
+        </div>
+
+        <!-- Borrower Section (Green) - Content | Card -->
+        <div class="how-it-works-row row-reverse">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-green"></div>
+            <div class="how-it-works-card card-green">
+              <div class="card-icon-wrapper">
+                <span class="material-icons-round card-icon">search</span>
+              </div>
+              <div class="card-badge badge-green">
+                <span>FIND YOUR SPOT</span>
+              </div>
+              <div class="card-gradient gradient-green"></div>
+            </div>
+          </div>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-green-light">FOR STUDENTS</div>
+            <h3 class="content-title">Borrower (Sub-Lessee)</h3>
+            <p class="content-description">Need a place for a semester internship or a short summer term? Skip the year-long leases and find flexible housing from fellow students.</p>
+            <ul class="content-list list-green">
+              <li>Browse available subleases near your campus or internship</li>
+              <li>Message hosts directly to schedule walkthroughs</li>
+              <li>Pay securely and settle in for exactly the months you need</li>
+            </ul>
+            <a href="#download" class="content-link link-green">Browse Listings →</a>
+          </div>
+        </div>
+
+        <div class="how-it-works-row">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-blue"></div>
+            <div class="how-it-works-card card-blue">
+              <div class="card-icon-wrapper">
+                <span class="material-icons-round card-icon">upload_file</span>
+              </div>
+              <div class="card-badge badge-blue">
+                <span>FOR STUDENTS</span>
+              </div>
+              <div class="card-gradient gradient-blue"></div>
+            </div>
+          </div>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-blue-light">FOR STUDENTS</div>
+            <h3 class="content-title">Off Campus Housing</h3>
+            <p class="content-description">Live in SpaceShare verified housing partner.</p>
+            <ul class="content-list list-blue">
+              <li>Well maintained room or unit and amenities</li>
+              <li>Connect with verified housing within your campus network</li>
+              <li>Securely transfer keys and handle agreements in-app</li>
+            </ul>
+            <a href="#download" class="content-link link-blue">Start Listing →</a>
+          </div>
+        </div>
+
+        <!-- Housing Partners Section (Dark) - Content | Card -->
+        <div class="how-it-works-row row-reverse">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-dark"></div>
+            <div class="how-it-works-card card-dark">
+              <div class="card-icon-wrapper">
+                <span class="material-icons-round card-icon icon-white">apartment</span>
+              </div>
+              <div class="card-badge badge-white">
+                <span>MANAGEMENT PORTAL</span>
+              </div>
+              <div class="card-gradient gradient-dark"></div>
+            </div>
+          </div>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-dark">FOR PROPERTY MANAGERS</div>
+            <h3 class="content-title">Housing Partners</h3>
+            <p class="content-description">Streamline your subleasing process. SpaceShare partners with property managers to approve subleases faster, maintain occupancy, and keep records organized.</p>
+            <ul class="content-list list-dark">
+              <li>Approve or deny sublease requests with a single click</li>
+              <li>Maintain 100% occupancy during off-peak seasons</li>
+              <li>Reduce administrative overhead with digital document management</li>
+            </ul>
+            <a href="spaceshare_partners.html" class="btn-dark">Partner With Us</a>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="how-it-works-cta">
+          <div class="cta-blur cta-blur-top"></div>
+          <div class="cta-blur cta-blur-bottom"></div>
+          <h2 class="cta-title">Ready to get started?</h2>
+          <p class="cta-subtitle">Join thousands of students and property managers making housing easier, safer, and more flexible.</p>
+          <div class="cta-buttons">
+            <a href="#download" class="btn-cta-primary">Download for Students</a>
           </div>
         </div>
       </div>
