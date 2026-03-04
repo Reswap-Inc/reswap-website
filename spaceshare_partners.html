@@ -37,31 +37,32 @@
       };
     </script>
 <style>
-        .calendar-day.selected {
-            background-color: #34a853;
-            color: white;
-        }
-        .calendar-day:hover:not(.selected):not(.disabled) {
-            background-color: #e6f4ea;
-        }
-        .dark .calendar-day:hover:not(.selected):not(.disabled) {
-            background-color: #2d3748;
+        .calendly-inline-widget iframe {
+            border-radius: 1rem;
         }
     </style>
 
 
 <nav class="w-full px-6 py-4 flex items-center justify-between bg-transparent relative z-20">
-<div class="flex items-center gap-8">
-<a class="text-2xl font-display font-bold text-primary tracking-tight" href="#">SpaceShare</a>
-<div class="hidden md:flex gap-6 text-sm font-medium text-text-muted-light dark:text-text-muted-dark">
-<a class="hover:text-primary transition-colors" href="#">Home</a>
-<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">Communities <span class="material-icons-round text-sm">expand_more</span></a>
-<a class="hover:text-primary transition-colors" href="#">About us</a>
+<a href="index.html" class="flex items-center">
+<img src="images/ReSwap-Logo-green.svg" alt="ReSwap" class="h-8">
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-text-muted-light dark:text-text-muted-dark absolute left-1/2 -translate-x-1/2">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+<div class="relative group">
+<a class="hover:text-primary transition-colors flex items-center gap-1 cursor-pointer" href="#">Communities <span class="material-icons-round text-sm">expand_more</span></a>
+<div class="absolute top-full left-0 mt-2 bg-white dark:bg-card-dark rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 py-2 min-w-[200px] hidden group-hover:block">
+<a class="block px-4 py-2 text-sm hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="fitshare.html">FitShare (Clothing)</a>
+<a class="block px-4 py-2 text-sm hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="needshare.html">NeedShare (Essentials)</a>
+<a class="block px-4 py-2 text-sm hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="spaceshare.html">SpaceShare (Housing)</a>
+<a class="block px-4 py-2 text-sm hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="tripshare.html">TripShare (Carpool)</a>
 </div>
+</div>
+<a class="hover:text-primary transition-colors" href="about_us.html">About us</a>
 </div>
 <div class="flex items-center gap-4">
-<a class="text-sm font-medium hover:text-primary transition-colors hidden sm:block" href="#">Admin Login</a>
-<button class="bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:bg-blue-400 transition-colors">Download App</button>
+<a class="text-sm font-medium hover:text-primary transition-colors hidden sm:block" href="https://usc.reswap.org/web/admin/home">Admin Login</a>
+<a href="spaceshare.html#download" class="bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:bg-blue-400 transition-colors">Download App</a>
 </div>
 </nav>
 <main class="flex-grow flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
@@ -114,68 +115,14 @@
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl dark:bg-primary/10 pointer-events-none"></div>
 <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl dark:bg-secondary/10 pointer-events-none"></div>
 <div class="bg-card-light dark:bg-card-dark rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden relative z-10">
-<div class="p-6 md:p-8">
+<div class="p-6 md:p-8 pb-4">
 <h3 class="text-2xl font-display font-bold mb-2">Schedule a Consultation</h3>
-<p class="text-text-muted-light dark:text-text-muted-dark text-sm mb-6">Talk to our partnership team to see how SpaceShare can increase your occupancy rates.</p>
-<div class="flex flex-col md:flex-row gap-6">
-<div class="flex-1">
-<div class="flex items-center justify-between mb-4">
-<h4 class="font-semibold text-sm">March 2026</h4>
-<div class="flex gap-2">
-<button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"><span class="material-icons-round text-sm">chevron_left</span></button>
-<button class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"><span class="material-icons-round text-sm">chevron_right</span></button>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm">Talk to our partnership team to see how SpaceShare can increase your occupancy rates.</p>
 </div>
-</div>
-<div class="grid grid-cols-7 text-center text-xs text-text-muted-light dark:text-text-muted-dark mb-2">
-<span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
-</div>
-<div class="grid grid-cols-7 gap-1 text-center text-sm">
-<span class="p-2"></span><span class="p-2"></span>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed text-gray-400" disabled="">1</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed text-gray-400" disabled="">2</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">3</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">4</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">5</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">6</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">7</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">8</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">9</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">10</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">11</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 selected shadow-md">12</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">13</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">14</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">15</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">16</button>
-<button class="calendar-day p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">17</button>
-</div>
-</div>
-<div class="flex-1 border-l border-gray-100 dark:border-gray-700 pl-0 md:pl-6 mt-6 md:mt-0">
-<h4 class="font-semibold text-sm mb-4">Thursday, Oct 12</h4>
-<div class="space-y-2 max-h-[220px] overflow-y-auto pr-1 custom-scrollbar">
-<button class="w-full py-2 px-4 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">09:00 AM</button>
-<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">09:30 AM</button>
-<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">10:00 AM</button>
-<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">11:30 AM</button>
-<button class="w-full py-2 px-4 border border-gray-200 dark:border-gray-600 text-text-muted-light dark:text-text-muted-dark rounded-lg text-sm font-medium hover:border-primary hover:text-primary transition-colors">01:00 PM</button>
-</div>
-</div>
-</div>
-<div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
-<form class="space-y-4">
-<div>
-<label class="block text-xs font-medium text-text-muted-light dark:text-text-muted-dark mb-1">Company Email</label>
-<input class="w-full rounded-lg border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-sm focus:ring-primary focus:border-primary" placeholder="name@company.com" type="email"/>
-</div>
-<button class="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 rounded-lg shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-0.5" type="button">
-                                    Confirm Booking
-                                </button>
-</form>
-</div>
-<div class="mt-4 flex items-center justify-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark">
-<span class="material-icons-round text-sm">lock</span> Secure scheduling powered by SpaceShare
-                        </div>
-</div>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/bre-reswap/30min?primary_color=31a050" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 </div>
 </div>
 </div>
