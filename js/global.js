@@ -13,6 +13,7 @@ class ThemeManager {
     // Set theme based on page
     this.detectPageTheme();
     this.setupThemeListeners();
+    this.updateFooterYear();
   }
 
   detectPageTheme() {
@@ -79,6 +80,11 @@ class ThemeManager {
       }
     });
   }
+  
+  updateFooterYear() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear;
+  } 
 }
 
 // FAQ Functionality
@@ -507,6 +513,403 @@ class AnimationManager {
   }
 }
 
+// Calendar Manager (for SpaceShare Partners page)
+class CalendarManager {
+  constructor() {
+    this.currentMonth = new Date();
+    this.selectedDate = null;
+    this.selectedTime = null;
+    this.availabilityData = {}; // Loaded from API
+    this.apiEndpoint = 'https://reswap.tmithun.com:443/api/partners/v1/';
+    this.calendarElement = null;
+    this.timeSlotsElement = null;
+    this.init();
+  }
+
+  async init() {
+    this.calendarElement = document.querySelector('.partners-calendar');
+    if (!this.calendarElement) return;
+
+    this.timeSlotsElement = document.querySelector('.time-slots-list');
+
+    try {
+      await this.loadAvailability();
+      this.renderCalendar();
+      this.attachEventListeners();
+    } catch (error) {
+      console.error('Calendar initialization failed:', error);
+      this.loadMockAvailability();
+      this.renderCalendar();
+      this.attachEventListeners();
+    }
+  }
+
+  async loadAvailability() {
+    // Fetch available dates/times from API
+    const month = this.formatMonth();
+    try {
+      const response = await fetch(`${this.apiEndpoint}availability?month=${month}`);
+      if (!response.ok) throw new Error('API request failed');
+
+      const data = await response.json();
+      this.availabilityData = data.availability || {};
+    } catch (error) {
+      console.warn('Failed to load availability from API, using mock data:', error);
+      this.loadMockAvailability();
+    }
+  }
+
+  loadMockAvailability() {
+    // Temporary mock data for development/testing
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+
+    this.availabilityData = {};
+
+    // Generate mock availability for next 30 days
+    for (let i = 0; i < 30; i++) {
+      const date = new Date(currentYear, currentMonth, today.getDate() + i);
+      const dateStr = this.formatDate(date);
+
+      // Only add availability for weekdays
+      if (date.getDay() !== 0 && date.getDay() !== 6) {
+        this.availabilityData[dateStr] = [
+          '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM',
+          '11:00 AM', '11:30 AM', '01:00 PM', '01:30 PM',
+          '02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM'
+        ];
+      }
+    }
+  }
+
+  formatMonth() {
+    const year = this.currentMonth.getFullYear();
+    const month = String(this.currentMonth.getMonth() + 1).padStart(2, '0');
+    return `${year}-${month}`;
+  }
+
+  formatDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  renderCalendar() {
+    const calendarGrid = this.calendarElement.querySelector('.calendar-days');
+    if (!calendarGrid) return;
+
+    // Update month display
+    const monthDisplay = this.calendarElement.querySelector('.calendar-month');
+    if (monthDisplay) {
+      const monthName = this.currentMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      monthDisplay.textContent = monthName;
+    }
+
+    // Clear existing days
+    calendarGrid.innerHTML = '';
+
+    // Get first day of month and number of days
+    const year = this.currentMonth.getFullYear();
+    const month = this.currentMonth.getMonth();
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Add empty cells for days before month starts
+    for (let i = 0; i < firstDay; i++) {
+      const emptyCell = document.createElement('div');
+      emptyCell.className = 'calendar-day-empty';
+      calendarGrid.appendChild(emptyCell);
+    }
+
+    // Add days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(year, month, day);
+      const dateStr = this.formatDate(date);
+      const isAvailable = this.availabilityData[dateStr] && this.availabilityData[dateStr].length > 0;
+      const isPast = date < today;
+      const isSelected = this.selectedDate === dateStr;
+
+      const dayButton = document.createElement('button');
+      dayButton.className = 'calendar-day';
+      dayButton.textContent = day;
+      dayButton.dataset.date = dateStr;
+
+      if (isSelected) {
+        dayButton.classList.add('selected');
+      }
+
+      if (isPast || !isAvailable) {
+        dayButton.classList.add('disabled');
+        dayButton.disabled = true;
+      }
+
+      calendarGrid.appendChild(dayButton);
+    }
+  }
+
+  attachEventListeners() {
+    // Month navigation
+    const prevBtn = this.calendarElement.querySelector('.calendar-prev');
+    const nextBtn = this.calendarElement.querySelector('.calendar-next');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => this.navigateMonth(-1));
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => this.navigateMonth(1));
+    }
+
+    // Day selection (use event delegation)
+    const calendarGrid = this.calendarElement.querySelector('.calendar-days');
+    if (calendarGrid) {
+      calendarGrid.addEventListener('click', (e) => {
+        if (e.target.classList.contains('calendar-day') && !e.target.disabled) {
+          this.selectDate(e.target.dataset.date);
+        }
+      });
+    }
+
+    // Time slot selection (use event delegation)
+    if (this.timeSlotsElement) {
+      this.timeSlotsElement.addEventListener('click', (e) => {
+        if (e.target.classList.contains('time-slot-btn')) {
+          this.selectTime(e.target.dataset.time);
+        }
+      });
+    }
+
+    // Form submission
+    const bookingForm = document.querySelector('.partners-booking-form');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = bookingForm.querySelector('input[type="email"]');
+        if (emailInput) {
+          this.submitBooking(emailInput.value);
+        }
+      });
+    }
+  }
+
+  async navigateMonth(direction) {
+    // Update current month
+    this.currentMonth = new Date(
+      this.currentMonth.getFullYear(),
+      this.currentMonth.getMonth() + direction,
+      1
+    );
+
+    // Reload availability for new month
+    await this.loadAvailability();
+
+    // Re-render calendar
+    this.renderCalendar();
+
+    // Clear selections if navigating away from selected month
+    if (this.selectedDate) {
+      const selectedDateObj = new Date(this.selectedDate);
+      if (selectedDateObj.getMonth() !== this.currentMonth.getMonth()) {
+        this.selectedDate = null;
+        this.selectedTime = null;
+        this.renderTimeSlots([]);
+      }
+    }
+  }
+
+  selectDate(dateStr) {
+    this.selectedDate = dateStr;
+    this.selectedTime = null; // Clear time selection when date changes
+
+    // Update UI
+    this.renderCalendar();
+
+    // Load and display available times
+    const times = this.availabilityData[dateStr] || [];
+    this.renderTimeSlots(times);
+
+    // Update date display
+    const dateDisplay = document.querySelector('.selected-date-display');
+    if (dateDisplay) {
+      const date = new Date(dateStr);
+      const formattedDate = date.toLocaleDateString('en-US', {
+        weekday: 'long',
+        month: 'short',
+        day: 'numeric'
+      });
+      dateDisplay.textContent = formattedDate;
+    }
+  }
+
+  renderTimeSlots(times) {
+    if (!this.timeSlotsElement) return;
+
+    this.timeSlotsElement.innerHTML = '';
+
+    if (times.length === 0) {
+      this.timeSlotsElement.innerHTML = '<p class="no-slots">No available time slots for this date</p>';
+      return;
+    }
+
+    times.forEach(time => {
+      const button = document.createElement('button');
+      button.className = 'time-slot-btn';
+      button.textContent = time;
+      button.dataset.time = time;
+
+      if (this.selectedTime === time) {
+        button.classList.add('selected');
+      }
+
+      this.timeSlotsElement.appendChild(button);
+    });
+  }
+
+  selectTime(time) {
+    this.selectedTime = time;
+
+    // Update UI
+    const timeButtons = this.timeSlotsElement.querySelectorAll('.time-slot-btn');
+    timeButtons.forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.time === time);
+    });
+
+    // Enable booking button
+    const bookingBtn = document.querySelector('.confirm-booking-btn');
+    if (bookingBtn) {
+      bookingBtn.disabled = false;
+      bookingBtn.classList.add('enabled');
+    }
+  }
+
+  async submitBooking(email) {
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      this.showError('Please enter a valid email address');
+      return;
+    }
+
+    // Validate selections
+    if (!this.selectedDate || !this.selectedTime) {
+      this.showError('Please select a date and time');
+      return;
+    }
+
+    // Show loading state
+    this.setButtonLoading(true);
+
+    try {
+      // POST to booking API
+      const response = await fetch(`${this.apiEndpoint}book`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          date: this.selectedDate,
+          time: this.selectedTime,
+          type: 'partnership_consultation'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        this.showSuccess('Booking confirmed! Check your email for details.');
+        this.resetForm();
+
+        // Reload availability to remove booked slot
+        await this.loadAvailability();
+        this.renderCalendar();
+        if (this.selectedDate) {
+          this.renderTimeSlots(this.availabilityData[this.selectedDate] || []);
+        }
+      } else {
+        this.showError(data.message || 'Booking failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Booking error:', error);
+      this.showError('Network error. Please check your connection.');
+    } finally {
+      this.setButtonLoading(false);
+    }
+  }
+
+  showError(message) {
+    const errorElement = document.querySelector('.booking-error');
+    if (errorElement) {
+      errorElement.textContent = message;
+      errorElement.style.display = 'block';
+
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        errorElement.style.display = 'none';
+      }, 5000);
+    }
+  }
+
+  showSuccess(message) {
+    const successElement = document.querySelector('.booking-success');
+    if (successElement) {
+      successElement.textContent = message;
+      successElement.style.display = 'block';
+
+      // Auto-hide after 10 seconds
+      setTimeout(() => {
+        successElement.style.display = 'none';
+      }, 10000);
+    }
+  }
+
+  setButtonLoading(isLoading) {
+    const btn = document.querySelector('.confirm-booking-btn');
+    if (!btn) return;
+
+    if (isLoading) {
+      btn.disabled = true;
+      btn.dataset.originalText = btn.textContent;
+      btn.textContent = 'Booking...';
+      btn.classList.add('loading');
+    } else {
+      btn.disabled = false;
+      btn.textContent = btn.dataset.originalText || 'Confirm Booking';
+      btn.classList.remove('loading');
+    }
+  }
+
+  resetForm() {
+    this.selectedDate = null;
+    this.selectedTime = null;
+
+    // Clear form inputs
+    const form = document.querySelector('.partners-booking-form');
+    if (form) {
+      form.reset();
+    }
+
+    // Disable booking button
+    const bookingBtn = document.querySelector('.confirm-booking-btn');
+    if (bookingBtn) {
+      bookingBtn.disabled = true;
+      bookingBtn.classList.remove('enabled');
+    }
+
+    // Clear time slots
+    if (this.timeSlotsElement) {
+      this.timeSlotsElement.innerHTML = '';
+    }
+
+    // Re-render calendar
+    this.renderCalendar();
+  }
+}
+
 // Initialize all managers when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   new ThemeManager();
@@ -516,6 +919,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new FormManager();
   new MobileMenu();
   new AnimationManager();
+  new CalendarManager();
 });
 
 // Navigation utilities

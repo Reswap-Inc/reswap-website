@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/global.css">
   <script src="js/global.js" defer></script>
@@ -51,7 +52,7 @@
           <p class="hero-welcome">Welcome to</p>
           <h1 class="hero-title">SpaceShare</h1>
           <p class="hero-subtitle">
-            SpaceShare brings student housing into one place, making it easier to find, list, and fill spaces within the campus community.</p>
+           SpaceShare centralizes Off-Campus student housing into one trusted, campus-first platform.</p>
           <div class="app-buttons" id="download">
             <a href="https://play.google.com/store/apps/details?id=com.reswapinc.reswap" target="_blank" aria-label="Get it on Google Play"><img src="images/google_play.png" alt="Get it on Google Play"></a>
             <a href="https://apps.apple.com/us/app/reswap/id6749553137" aria-label="Download on the App Store"><img src="images/app_store.png" alt="Download on the App Store"></a>
@@ -65,54 +66,208 @@
     <section id="what-you-can-share" class="why-choose-section">
       <div class="container">
         <h2 class="section-title">What is SpaceShare?</h2>
-        <p class="section-subtitle section-subtitle-wide">SpaceShare is your campus housing exchange. Students can list subleases for specific timeframes or join an existing lease that fits their schedule.</p>
+        <p class="section-subtitle section-subtitle-wide">SpaceShare is ReSwap's student housing platform designed to fix the broken discovery process. Students can list subleases for specific timeframes, join an existing lease, or browse full housing listings.
+Real, student-verified housing near campus.</p>
         <div class="features-grid">
           <div class="feature-card">
             <img src="images/money.svg" alt="Save Costs" class="feature-icon">
             <h3 class="feature-title">Affordable Flexibility</h3>
-            <p class="feature-description">Save money with semester-friendly stays.</p>
+            <p class="feature-description">Save money with semester-friendly lease options designed around how students live.</p>
           </div>
           <div class="feature-card">
             <img src="images/trust_icon.svg" alt="Community Trust" class="feature-icon">
             <h3 class="feature-title">Student-Verified</h3>
-            <p class="feature-description">Every listing comes from real students in your community.</p>
+            <p class="feature-description">Every listing comes from real students or trusted housing partners in your campus community.</p>
           </div>
           <div class="feature-card">
             <img src="images/lotus_beige.svg" alt="Flexible Options" class="feature-icon feature-icon-large">
             <h3 class="feature-title">Stress-Free Move</h3>
-            <p class="feature-description">Find or list a space fast.</p>
+            <p class="feature-description">Find or list a space fast without the back-and-forth or the paperwork headache.
+</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works-section">
+    <!-- How It Works Section V2 -->
+    <section id="how-it-works" class="how-it-works-section-v2">
       <div class="container">
-        <h2 class="section-title">How SpaceShare Works</h2>
-        <div class="how-it-works-grid">
-          <div class="how-it-works-card lendor">
-            <h3>Lender (Sub-Lessor)</h3>
-            <p>List your place when you’re away (study abroad, internship, moving early) and avoid paying for the months you’re not there.</p>
-            <ul>
-              <li>Post your room or unit with photos and details</li>
-              <li>Set your timeline and rent price</li>
-              <li>Connect with verified students in your campus network</li>
-              <li>Transfer keys and stay protected with in-app messaging</li>
-              <li>Save money and help someone who needs housing</li>
-            </ul>
+        <!-- Header -->
+        <div class="how-it-works-header">
+          <h2 class="section-title">How SpaceShare Works</h2>
+          <p class="section-subtitle">Connecting students who need space with those who have it, and partnering with housing providers to make subleasing seamless.</p>
+        </div>
+
+        <!-- Lender Section (Blue) -->
+        <div class="how-it-works-row">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-blue"></div>
+            <div class="how-it-works-card card-blue">
+              <div class="card-icon-wrapper">
+                <img src="images/spaceshare/card-image-1.jpg" alt="For Students">
+              </div>
+            </div>
           </div>
-          <div class="how-it-works-card seller">
-            <h3>Borrower (Sub-Lessee) </h3>
-            <p>Find a place for the semester, summer, or short-term.</p>
-            <ul>
-              <li>Browse available subleases near campus</li>
-              <li>Message the host to schedule a walkthrough or pickup</li>
-              <li>Settle in for the months you need</li>
-              <li>Return the space as you found it and leave a rating</li>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-blue-light">FOR STUDENTS</div>
+            <h3 class="content-title">List Your Space</h3>
+            <p class="content-description">Heading home for the summer or studying abroad? List your space securely on SpaceShare and connect with verified students in your campus network.</p>
+            <ul class="content-list list-blue">
+              <li>Post your room or unit with detailed photos and amenities</li>
+              <li>Connect with verified students within your campus network</li>
+              <li>Securely transfer keys and handle agreements in-app</li>
             </ul>
+            <!-- <a href="#download" class="content-link link-blue">Start Listing →</a> -->
           </div>
         </div>
+
+        <!-- Borrower Section (Green) - Content | Card -->
+        <div class="how-it-works-row row-reverse">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-green"></div>
+            <div class="how-it-works-card card-green">
+              <div class="card-icon-wrapper">
+                 <img src="images/spaceshare/card-image-2.jpg" alt="For Students">
+              </div>
+              <div class="card-badge badge-green">
+                <span>Find Your Space</span>
+              </div>
+            </div>
+          </div>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-green-light">FOR STUDENTS</div>
+            <h3 class="content-title">Find Your Space</h3>
+            <p class="content-description">Need a place for a semester internship, a short summer term, or a last-minute move? Find flexible housing from fellow students for exactly the time you need it, at prices that don't break the bank.</p>
+            <ul class="content-list list-green">
+              <li>Browse available subleases near your campus or internship location</li>
+              <li>Message hosts directly to schedule walkthroughs</li>
+              <li>Pay securely and settle in for exactly the months you need</li>
+            </ul>
+            <!-- <a href="#download" class="content-link link-green">Browse Listings →</a> -->
+          </div>
+        </div>
+
+        <div class="how-it-works-row">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-blue"></div>
+            <div class="how-it-works-card card-blue">
+              <div class="card-icon-wrapper">
+                <img src="images/spaceshare/card-image-3.jpg" alt="For Students">
+              </div>
+              <div class="card-badge badge-blue">
+                <span>FOR STUDENTS</span>
+              </div>
+              <!-- <div class="card-gradient gradient-blue"></div> -->
+            </div>
+          </div>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-blue-light">FOR STUDENTS</div>
+            <h3 class="content-title">Browse Partner Listings  </h3>
+            <p class="content-description">Live in SpaceShare verified housing partner.</p>
+            <ul class="content-list list-blue">
+              <li>Looking for a full lease near campus? Browse listings posted directly by SpaceShare’s verified housing partners.   </li>
+              <li>Connect with verified housing within your campus network</li>
+              <li>Properties that are student-verified, well-maintained, and ready to move in.</li>
+            </ul>
+            <a href="#housing-partners" class="content-link link-blue">View Partner Listings →</a>
+          </div>
+        </div>
+
+        <!-- Housing Partners Section (Dark) - Content | Card -->
+        <div class="how-it-works-row row-reverse">
+          <div class="how-it-works-card-wrapper">
+            <div class="card-overlay overlay-dark"></div>
+            <div class="how-it-works-card card-dark">
+              <div class="card-icon-wrapper">
+                <img src="images/spaceshare/card-image-4.jpg" alt="For Students">
+              </div>
+              <div class="card-badge badge-white">
+                <span>MANAGEMENT PORTAL</span>
+              </div>
+            </div>
+          </div>
+          <div class="how-it-works-content">
+            <div class="content-badge badge-dark">FOR PROPERTY MANAGERS</div>
+            <h3 class="content-title">Become a Housing Partner</h3>
+            <p class="content-description">List your properties directly on SpaceShare and get in front of verified University students before they start searching. Join our growing network of trusted campus housing providers.</p>
+            <ul class="content-list list-dark">
+              <li>Approve or deny sublease requests with a single click</li>
+              <li>Maintain occupancy during off-peak seasons</li>
+              <li>Reduce admin overhead with digital document management</li>
+            </ul>
+            <a href="spaceshare_partners.html" class="btn-dark">Partner With Us</a>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="how-it-works-cta">
+          <div class="cta-blur cta-blur-top"></div>
+          <div class="cta-blur cta-blur-bottom"></div>
+          <h2 class="cta-title">One Platform. Every Housing Need. </h2>
+          <p class="cta-subtitle">Whether you're subletting your room, finding your next place, browsing partner listings, or filling vacancies as a property manager, SpaceShare is where Off-Campus housing happens.</p>
+          <div class="cta-buttons">
+            <a href="#download" class="btn-cta-primary">Download ReSwap</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Housing Partners Banner Section -->
+    <section id="housing-partners" class="partners-banner-section">
+      <div class="container">
+        <h2 class="section-title">Our Housing Partners</h2>
+        <p class="section-subtitle">Real properties. Verified listings. Posted directly by the housing companies University students trust most.</p>
+      </div>
+      <div class="partners-marquee-wrapper">
+        <div class="partners-marquee">
+          <div class="partners-track">
+            <!-- Partner logos - duplicated for seamless loop -->
+            <div class="partner-logo-item">
+              <img src="images/partners/Ellendale website logo .jpg" alt="Housing Partner 1">
+              <span>Ellendale</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/Heritage Updated Logo.png" alt="Housing Partner 3">
+              <span>Heritage</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/Trojan Partners logo .png" alt="Housing Partner 4">
+              <span>Trojan Partners</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/stuho black (1) (1).png" alt="Housing Partner 5">
+              <span>Stuho</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/jflats.logo.default.png" alt="Housing Partner 6">
+              <span>Jefferson Flats</span>
+            </div> 
+            <!-- Duplicate set for seamless loop -->
+            <div class="partner-logo-item">
+              <img src="images/partners/Ellendale website logo .jpg" alt="Housing Partner 1">
+              <span>Ellendale</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/Heritage Updated Logo.png" alt="Housing Partner 3">
+              <span>Heritage</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/Trojan Partners logo .png" alt="Housing Partner 4">
+              <span>Trojan Partners</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/stuho black (1) (1).png" alt="Housing Partner 5">
+              <span>Stuho</span>
+            </div>
+            <div class="partner-logo-item">
+              <img src="images/partners/jflats.logo.default.png" alt="Housing Partner 6">
+              <span>Jefferson Flats</span>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div class="container partners-cta-container">
+        <a href="spaceshare_partners.html" class="btn btn-primary">Contact Us, Become a Partner</a>
       </div>
     </section>
 
@@ -145,19 +300,28 @@
     <section id="why-it-matters" class="info-section">  
       <div class="info-section-background"></div>
       <div class="container info-container">
-        <h2 class="info-title">Why SpaceShare Matters</h2>
-        <p class="info-description">SpaceShare puts students in control of their housing timelines. Students can pass along or step into housing for the time they actually need, making moves, transitions, and planning easier.</p>
-    </div>
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p>Get housing updates, safety alerts, and community news.</p>
+          <h5 class="subscribe-title">JOIN SPACESHARE</h5>
+          <p>Never miss new listings or subleases.</p>
+          <form class="subscribe-form" data-subscribe-tags="spaceshare-footer">
+            <input type="email" placeholder="Your Email *" required>
+            <input type="text" name="url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="subscribe-legal">By subscribing you agree to our <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a> & provide consent to receive updates from SpaceShare.</p>
+
+      </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section id="cta" class="cta-section">
+    <!-- <section id="cta" class="cta-section">
       <img src="images/4868_139.svg" class="cta-blur-bg" alt="">
       <div class="container cta-container">
         <h2 class="cta-title">Start your SpaceShare journey today</h2>
         <a href="#" class="btn btn-cta">Explore Listings</a>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <footer id="footer" class="site-footer">
@@ -202,18 +366,7 @@
             <a href="https://share.google/CBvmgw6fDsq2qk2IF"><img src="images/linkedin_icon.png" alt="Social Icon"></a>
           </div>
         </div>
-        <div class="footer-col footer-subscribe-col">
-          <h4 class="footer-heading">Stay Connected</h4>
-          <p>Get housing updates, safety alerts, and community news.</p>
-          <h5 class="subscribe-title">JOIN SPACESHARE</h5>
-          <p>Never miss new listings or subleases.</p>
-          <form class="subscribe-form" data-subscribe-tags="spaceshare-footer">
-            <input type="email" placeholder="Your Email *" required>
-            <input type="text" name="url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="subscribe-legal">By subscribing you agree to our <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a> & provide consent to receive updates from SpaceShare.</p>
-        </div>
+        
       </div>
     </div>
     <div class="footer-bottom">
@@ -222,7 +375,7 @@
           <a href="https://reswap.tmithun.com/api/general/v1.2/files/pages/PrivacyPolicy.html">Privacy Policy</a>
           <a href="https://reswap.tmithun.com:443/api/general/v1.2/files/pages/TermsAndCondition.html">Terms of Service</a>
         </div>
-        <div class="footer-copyright">© ReSwap 2025</div>
+        <div class="footer-copyright">&copy; ReSwap <span id="current-year"></span></div>
       </div>
     </div>
   </footer>
