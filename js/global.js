@@ -13,6 +13,7 @@ class ThemeManager {
     // Set theme based on page
     this.detectPageTheme();
     this.setupThemeListeners();
+    this.updateFooterYear();
   }
 
   detectPageTheme() {

@@ -3,7 +3,8 @@
     "allow": [
       "Bash(wc:*)",
       "Bash(python -m http.server:*)",
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(grep -l \"current-year\" e:/ReSwap/reswap-website/*.html e:/ReSwap/reswap-website/about_us/index.html)"
     ]
   }
 }
