@@ -48,3 +48,22 @@ for (const name of ['privacy', 'terms']) {
     assert.doesNotMatch(html, /<script\b/i, 'public legal pages must be readable without scripts');
   });
 }
+
+test('reviewer evidence uses the exact privacy-reviewed Android captures, not an enrollment form', () => {
+  const html = read('sms-consent.html');
+  const evidence = JSON.parse(read('sms-consent-evidence.json'));
+  assert.equal(evidence.environment, 'development');
+  assert.equal(evidence.platform, 'Android');
+  assert.match(html, /not an SMS signup form/);
+  assert.match(html, /no verification-code consent checkbox/);
+  assert.match(html, /Send verification code/);
+  assert.match(html, /production availability, carrier approval, or delivery of live SMS/);
+  assert.ok(html.includes(evidence.mobileSourceCommit));
+  assert.doesNotMatch(html, /<(?:form|input)\b/i, 'evidence page must not imply it records consent');
+  assert.equal(evidence.images.length, 2);
+  for (const image of evidence.images) {
+    assert.ok(html.includes('src="/' + image.path + '"'), `missing actual evidence ${image.path}`);
+    assert.equal(createHash('sha256').update(readFileSync(join(root, image.path))).digest('hex'), image.sha256,
+      'published evidence must be the exact approved unmodified screenshot');
+  }
+});

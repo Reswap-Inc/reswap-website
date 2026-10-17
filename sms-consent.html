@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReSwap SMS consent and verification</title>
+  <meta name="description" content="How ReSwap users request verification codes and separately consent to optional account and invitation text messages in the mobile app.">
+  <link rel="canonical" href="https://joinreswap.com/sms-consent.html">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/legal.css">
+  <style>body { font-family: Arial, sans-serif; line-height: 1.6; } figure { margin: 24px 0; } figcaption { margin-top: 8px; color: #526459; } .consent-evidence { max-width: 480px; width: 100%; }</style>
+</head>
+<body>
+  <header class="policy-header">
+    <a class="policy-brand" href="/"><img src="/images/ReSwap-Logo-green.svg" alt="ReSwap" width="162" height="42"></a>
+    <nav aria-label="Policy navigation"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="mailto:support@reswap.org">Contact support</a></nav>
+  </header>
+  <main class="policy-main">
+    <article class="sms-policy">
+      <h1>ReSwap SMS consent and verification</h1>
+      <p class="policy-date">Native-app consent information, October 17, 2026.</p>
+      <p>This page explains the SMS choices shown in the ReSwap mobile app. It is not an SMS signup form: this website does not collect phone numbers or enroll visitors in text messages.</p>
+      <h2>Requested verification codes</h2>
+      <p>On the app's phone verification screen, a user enters the phone number they own and taps <strong>Send verification code</strong> to explicitly request a verification text. The SMS disclosure is shown before that button. There is no verification-code consent checkbox: the deliberate code-request button is the action. A code request authorizes the requested verification text, not future account or invitation notices. Resending requests another code.</p>
+      <h2>Optional account and invitation notices</h2>
+      <p>The app presents a separate, optional SMS choice for account and group or TripShare invitation notices. This choice is off by default. The user must enable it to record their consent. It is separate from accepting the general Terms of Service and is not required to request a verification code, make a purchase, or use the app generally.</p>
+      <p>Another member entering someone's phone number, importing a contact, or creating an invitation does not authorize an SMS. Optional invitation texts are limited to recipients with verified phone ownership and their own recorded SMS consent. Other invitations stay in the app or use eligible email delivery; this is not an unsolicited direct-message service.</p>
+      <h2>Disclosures and preferences</h2>
+      <p>The app identifies ReSwap and the purpose of the messages. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help, or contact <a href="mailto:support@reswap.org">support@reswap.org</a>. Optional SMS consent is not a condition of purchase or general app access. No mobile information is sold or shared with third parties or affiliates for promotional or marketing purposes.</p>
+      <p>Users can turn off optional notices in the app. SMS opt-out is also honored at the messaging provider. Resuming provider delivery does not create the user's separate optional account or invitation consent.</p>
+      <p>The disclosure links directly to the <a href="/privacy.html#sms">ReSwap Privacy Policy</a> and <a href="/terms.html#sms">ReSwap SMS Terms</a>, both publicly accessible without signing in.</p>
+      <section id="consent-screenshots" aria-labelledby="screenshots-title">
+        <h2 id="screenshots-title">Native-app consent screens</h2>
+        <p>These are unmodified screenshots captured from the actual Android app during QA on October 17, 2026, from mobile source <code>226a1ed30</code>. The new-number field is intentionally empty to avoid publishing a phone number. The masked suffix belongs to a dummy development number. The optional preference was set to OFF for this capture; a new consent record also defaults to OFF. QA checked saving both choices and left this test account's optional notices OFF.</p>
+        <p>The screenshots document the native consent screens in a development environment. They do not certify production availability, carrier approval, or delivery of live SMS.</p>
+        <figure>
+          <a href="/images/sms/sms-code-request-disclosure.png"><img class="consent-evidence" src="/images/sms/sms-code-request-disclosure.png" width="1080" height="2400" alt="Actual Android phone verification screen with an empty new-number field, requested-code SMS disclosure, public SMS Terms and Privacy links, and the Send verification code button."></a>
+          <figcaption>Verification request: the disclosure explains one code per request, additional codes on resend, message and data rates, STOP and HELP, and no subscription to optional notifications. The button is disabled while the number field is empty.</figcaption>
+        </figure>
+        <figure>
+          <a href="/images/sms/sms-optional-consent-off.png"><img class="consent-evidence" src="/images/sms/sms-optional-consent-off.png" width="1080" height="2400" loading="lazy" alt="Actual Android optional SMS notifications section showing the full standalone account and invitation consent disclosure, an OFF switch, and SMS Terms and Privacy links."></a>
+          <figcaption>Optional notices: a separate OFF switch accompanies account and invitation consent, frequency, rates, STOP and HELP, no purchase or app-access condition, verification-code separation, and no marketing sharing. Changing this preference saves the user's choice.</figcaption>
+        </figure>
+      </section>
+    </article>
+  </main>
+  <footer class="policy-navigation"><a href="/">ReSwap home</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></footer>
+</body>
+</html>

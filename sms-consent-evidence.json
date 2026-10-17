@@ -1,0 +1,17 @@
+{
+  "capturedOn": "2026-10-17",
+  "environment": "development",
+  "platform": "Android",
+  "mobileSourceCommit": "226a1ed30",
+  "notes": "Actual, unmodified, privacy-reviewed native screenshots. New-number field is empty; masked dummy-number suffix only. Optional preference was established OFF for capture, on/off persistence verified, and left OFF. These are not production certification or live SMS delivery proof.",
+  "images": [
+    {
+      "path": "images/sms/sms-code-request-disclosure.png",
+      "sha256": "a046ce73a1f0a0d392dafe7d2738e798c82da40b1d3c1be2927b478d3d4a4b3b"
+    },
+    {
+      "path": "images/sms/sms-optional-consent-off.png",
+      "sha256": "7460f55e61ce4dc3b2e5681078ac50899326f57a55fb1111af1340c79c134cb3"
+    }
+  ]
+}
