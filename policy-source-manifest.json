@@ -1,0 +1,18 @@
+{
+  "sourceRepository": "Reswap-Inc/reswap-general-api",
+  "sourceCommit": "4494da29271dad618646e91054dafdc3cdff3b55",
+  "importedAt": "2026-10-17",
+  "normalization": "Whitespace only; the original general policy body is preserved between explicit markers.",
+  "policies": {
+    "privacy": {
+      "sourceFile": "PrivacyPolicy.html",
+      "sourceSha256": "4c4add4b4251eacc1344f5333c404a5daa0eaaccf2bbb639953936eed3c57a8d",
+      "normalizedBodySha256": "f57b1f792d62d59b1604cc698e3ce360b8eec99f71cb1f7b9c26ceb58036a6d0"
+    },
+    "terms": {
+      "sourceFile": "TermsAndCondition.html",
+      "sourceSha256": "969976252da5465627b58743936c858e126fc4bcc79fbd60b37b2969571bf8a2",
+      "normalizedBodySha256": "1763a9e02e0cd9bc548bfd28b9569ca1290518c1fd2c742623d9bfdd07ce3968"
+    }
+  }
+}
